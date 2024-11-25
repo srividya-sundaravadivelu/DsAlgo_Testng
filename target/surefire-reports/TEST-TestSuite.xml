@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="147.799" tests="29" errors="0" skipped="0" failures="3">
+  <properties>
+    <property name="java.specification.version" value="22"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\srivi\eclipse-workspace\DsAlgo-Testng\target\test-classes;C:\Users\srivi\eclipse-workspace\DsAlgo-Testng\target\classes;C:\Users\srivi\.m2\repository\org\projectlombok\lombok\1.18.28\lombok-1.18.28.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-java\4.25.0\selenium-java-4.25.0.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-api\4.25.0\selenium-api-4.25.0.jar;C:\Users\srivi\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.25.0\selenium-chrome-driver-4.25.0.jar;C:\Users\srivi\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.25.0\selenium-chromium-driver-4.25.0.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-json\4.25.0\selenium-json-4.25.0.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.25.0\selenium-manager-4.25.0.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v127\4.25.0\selenium-devtools-v127-4.25.0.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v128\4.25.0\selenium-devtools-v128-4.25.0.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v129\4.25.0\selenium-devtools-v129-4.25.0.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.25.0\selenium-devtools-v85-4.25.0.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.25.0\selenium-edge-driver-4.25.0.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.25.0\selenium-firefox-driver-4.25.0.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-http\4.25.0\selenium-http-4.25.0.jar;C:\Users\srivi\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.25.0\selenium-ie-driver-4.25.0.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.25.0\selenium-remote-driver-4.25.0.jar;C:\Users\srivi\.m2\repository\com\google\guava\guava\33.3.0-jre\guava-33.3.0-jre.jar;C:\Users\srivi\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\srivi\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\srivi\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\srivi\.m2\repository\org\checkerframework\checker-qual\3.43.0\checker-qual-3.43.0.jar;C:\Users\srivi\.m2\repository\com\google\errorprone\error_prone_annotations\2.28.0\error_prone_annotations-2.28.0.jar;C:\Users\srivi\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\srivi\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.25.0-alpha\opentelemetry-semconv-1.25.0-alpha.jar;C:\Users\srivi\.m2\repository\io\opentelemetry\opentelemetry-api\1.42.1\opentelemetry-api-1.42.1.jar;C:\Users\srivi\.m2\repository\io\opentelemetry\opentelemetry-context\1.42.1\opentelemetry-context-1.42.1.jar;C:\Users\srivi\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.42.1\opentelemetry-exporter-logging-1.42.1.jar;C:\Users\srivi\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.42.1\opentelemetry-sdk-common-1.42.1.jar;C:\Users\srivi\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.42.1\opentelemetry-sdk-extension-autoconfigure-spi-1.42.1.jar;C:\Users\srivi\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.42.1\opentelemetry-sdk-extension-autoconfigure-1.42.1.jar;C:\Users\srivi\.m2\repository\io\opentelemetry\opentelemetry-api-incubator\1.42.1-alpha\opentelemetry-api-incubator-1.42.1-alpha.jar;C:\Users\srivi\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.42.1\opentelemetry-sdk-trace-1.42.1.jar;C:\Users\srivi\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.42.1\opentelemetry-sdk-1.42.1.jar;C:\Users\srivi\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.42.1\opentelemetry-sdk-metrics-1.42.1.jar;C:\Users\srivi\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.42.1\opentelemetry-sdk-logs-1.42.1.jar;C:\Users\srivi\.m2\repository\net\bytebuddy\byte-buddy\1.15.1\byte-buddy-1.15.1.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-os\4.25.0\selenium-os-4.25.0.jar;C:\Users\srivi\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.25.0\selenium-safari-driver-4.25.0.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-support\4.25.0\selenium-support-4.25.0.jar;C:\Users\srivi\.m2\repository\org\apache\poi\poi\5.2.5\poi-5.2.5.jar;C:\Users\srivi\.m2\repository\commons-codec\commons-codec\1.16.0\commons-codec-1.16.0.jar;C:\Users\srivi\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\srivi\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\Users\srivi\.m2\repository\com\zaxxer\SparseBitSet\1.3\SparseBitSet-1.3.jar;C:\Users\srivi\.m2\repository\org\apache\poi\poi-ooxml\5.2.5\poi-ooxml-5.2.5.jar;C:\Users\srivi\.m2\repository\org\apache\poi\poi-ooxml-lite\5.2.5\poi-ooxml-lite-5.2.5.jar;C:\Users\srivi\.m2\repository\org\apache\xmlbeans\xmlbeans\5.2.0\xmlbeans-5.2.0.jar;C:\Users\srivi\.m2\repository\org\apache\commons\commons-compress\1.25.0\commons-compress-1.25.0.jar;C:\Users\srivi\.m2\repository\com\github\virtuald\curvesapi\1.08\curvesapi-1.08.jar;C:\Users\srivi\.m2\repository\org\testng\testng\7.10.2\testng-7.10.2.jar;C:\Users\srivi\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\srivi\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\srivi\.m2\repository\com\aventstack\extentreports\5.0.9\extentreports-5.0.9.jar;C:\Users\srivi\.m2\repository\io\reactivex\rxjava3\rxjava\3.0.4\rxjava-3.0.4.jar;C:\Users\srivi\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\srivi\.m2\repository\org\freemarker\freemarker\2.3.30\freemarker-2.3.30.jar;C:\Users\srivi\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;C:\Users\srivi\.m2\repository\tech\grasshopper\extentreports-cucumber7-adapter\1.10.1\extentreports-cucumber7-adapter-1.10.1.jar;C:\Users\srivi\.m2\repository\tech\grasshopper\extent-pdf-report\2.9.1\extent-pdf-report-2.9.1.jar;C:\Users\srivi\.m2\repository\tech\grasshopper\cucumber-pdf-report\2.11.1\cucumber-pdf-report-2.11.1.jar;C:\Users\srivi\.m2\repository\org\apache\pdfbox\pdfbox\2.0.26\pdfbox-2.0.26.jar;C:\Users\srivi\.m2\repository\org\apache\pdfbox\fontbox\2.0.26\fontbox-2.0.26.jar;C:\Users\srivi\.m2\repository\org\knowm\xchart\xchart\3.8.0\xchart-3.8.0.jar;C:\Users\srivi\.m2\repository\de\erichseifert\vectorgraphics2d\VectorGraphics2D\0.13\VectorGraphics2D-0.13.jar;C:\Users\srivi\.m2\repository\de\rototor\pdfbox\graphics2d\0.30\graphics2d-0.30.jar;C:\Users\srivi\.m2\repository\com\madgag\animated-gif-lib\1.4\animated-gif-lib-1.4.jar;C:\Users\srivi\.m2\repository\org\yaml\snakeyaml\1.28\snakeyaml-1.28.jar;C:\Users\srivi\.m2\repository\tech\grasshopper\table-layout\1.5.1\table-layout-1.5.1.jar;C:\Users\srivi\.m2\repository\tech\grasshopper\rest-assured-cucumber-pdf-report\1.4.1\rest-assured-cucumber-pdf-report-1.4.1.jar;C:\Users\srivi\.m2\repository\org\jsoup\jsoup\1.15.3\jsoup-1.15.3.jar;C:\Users\srivi\.m2\repository\com\aventstack\klov-reporter\5.0.9\klov-reporter-5.0.9.jar;C:\Users\srivi\.m2\repository\org\mongodb\mongodb-driver\3.6.4\mongodb-driver-3.6.4.jar;C:\Users\srivi\.m2\repository\org\mongodb\mongodb-driver-core\3.6.4\mongodb-driver-core-3.6.4.jar;C:\Users\srivi\.m2\repository\org\mongodb\bson\3.6.4\bson-3.6.4.jar;C:\Users\srivi\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\srivi\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\srivi\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\srivi\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\srivi\.m2\repository\tech\grasshopper\htmlextentreporter\1.0.1\htmlextentreporter-1.0.1.jar;C:\Users\srivi\.m2\repository\tech\grasshopper\extent-excel-report\1.3.0\extent-excel-report-1.3.0.jar;C:\Users\srivi\.m2\repository\io\cucumber\cucumber-java\7.2.3\cucumber-java-7.2.3.jar;C:\Users\srivi\.m2\repository\io\cucumber\cucumber-core\7.2.3\cucumber-core-7.2.3.jar;C:\Users\srivi\.m2\repository\io\cucumber\cucumber-gherkin\7.2.3\cucumber-gherkin-7.2.3.jar;C:\Users\srivi\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.2.3\cucumber-gherkin-messages-7.2.3.jar;C:\Users\srivi\.m2\repository\io\cucumber\messages\17.1.1\messages-17.1.1.jar;C:\Users\srivi\.m2\repository\io\cucumber\tag-expressions\4.1.0\tag-expressions-4.1.0.jar;C:\Users\srivi\.m2\repository\io\cucumber\cucumber-expressions\15.0.1\cucumber-expressions-15.0.1.jar;C:\Users\srivi\.m2\repository\io\cucumber\datatable\7.2.3\datatable-7.2.3.jar;C:\Users\srivi\.m2\repository\io\cucumber\cucumber-plugin\7.2.3\cucumber-plugin-7.2.3.jar;C:\Users\srivi\.m2\repository\io\cucumber\docstring\7.2.3\docstring-7.2.3.jar;C:\Users\srivi\.m2\repository\io\cucumber\html-formatter\17.0.0\html-formatter-17.0.0.jar;C:\Users\srivi\.m2\repository\io\cucumber\ci-environment\8.1.0\ci-environment-8.1.0.jar;C:\Users\srivi\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\srivi\.m2\repository\io\qameta\allure\allure-testng\2.29.0\allure-testng-2.29.0.jar;C:\Users\srivi\.m2\repository\io\qameta\allure\allure-java-commons\2.29.0\allure-java-commons-2.29.0.jar;C:\Users\srivi\.m2\repository\io\qameta\allure\allure-model\2.29.0\allure-model-2.29.0.jar;C:\Users\srivi\.m2\repository\io\qameta\allure\allure-test-filter\2.29.0\allure-test-filter-2.29.0.jar;C:\Users\srivi\.m2\repository\org\apache\logging\log4j\log4j-core\2.20.0\log4j-core-2.20.0.jar;C:\Users\srivi\.m2\repository\org\apache\logging\log4j\log4j-api\2.20.0\log4j-api-2.20.0.jar;C:\Users\srivi\.m2\repository\org\slf4j\slf4j-api\2.0.7\slf4j-api-2.0.7.jar;C:\Users\srivi\.m2\repository\org\slf4j\slf4j-simple\2.0.7\slf4j-simple-2.0.7.jar;C:\Users\srivi\.m2\repository\commons-io\commons-io\2.16.1\commons-io-2.16.1.jar;C:\Users\srivi\.m2\repository\picocontainer\picocontainer\3\picocontainer-3.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="America/Chicago"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="22"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-22\bin"/>
+    <property name="sun.java.command" value="C:\Users\srivi\AppData\Local\Temp\surefire18221030915818628697\surefirebooter13064979731351084424.jar C:\Users\srivi\AppData\Local\Temp\surefire18221030915818628697 2024-11-25T09-44-49_289-jvmRun1 surefire11560410080741465862tmp surefire_014050264599833723303tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\srivi\eclipse-workspace\DsAlgo-Testng\target\test-classes;C:\Users\srivi\eclipse-workspace\DsAlgo-Testng\target\classes;C:\Users\srivi\.m2\repository\org\projectlombok\lombok\1.18.28\lombok-1.18.28.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-java\4.25.0\selenium-java-4.25.0.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-api\4.25.0\selenium-api-4.25.0.jar;C:\Users\srivi\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.25.0\selenium-chrome-driver-4.25.0.jar;C:\Users\srivi\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.25.0\selenium-chromium-driver-4.25.0.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-json\4.25.0\selenium-json-4.25.0.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.25.0\selenium-manager-4.25.0.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v127\4.25.0\selenium-devtools-v127-4.25.0.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v128\4.25.0\selenium-devtools-v128-4.25.0.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v129\4.25.0\selenium-devtools-v129-4.25.0.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.25.0\selenium-devtools-v85-4.25.0.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.25.0\selenium-edge-driver-4.25.0.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.25.0\selenium-firefox-driver-4.25.0.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-http\4.25.0\selenium-http-4.25.0.jar;C:\Users\srivi\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.25.0\selenium-ie-driver-4.25.0.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.25.0\selenium-remote-driver-4.25.0.jar;C:\Users\srivi\.m2\repository\com\google\guava\guava\33.3.0-jre\guava-33.3.0-jre.jar;C:\Users\srivi\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\srivi\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\srivi\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\srivi\.m2\repository\org\checkerframework\checker-qual\3.43.0\checker-qual-3.43.0.jar;C:\Users\srivi\.m2\repository\com\google\errorprone\error_prone_annotations\2.28.0\error_prone_annotations-2.28.0.jar;C:\Users\srivi\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\srivi\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.25.0-alpha\opentelemetry-semconv-1.25.0-alpha.jar;C:\Users\srivi\.m2\repository\io\opentelemetry\opentelemetry-api\1.42.1\opentelemetry-api-1.42.1.jar;C:\Users\srivi\.m2\repository\io\opentelemetry\opentelemetry-context\1.42.1\opentelemetry-context-1.42.1.jar;C:\Users\srivi\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.42.1\opentelemetry-exporter-logging-1.42.1.jar;C:\Users\srivi\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.42.1\opentelemetry-sdk-common-1.42.1.jar;C:\Users\srivi\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.42.1\opentelemetry-sdk-extension-autoconfigure-spi-1.42.1.jar;C:\Users\srivi\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.42.1\opentelemetry-sdk-extension-autoconfigure-1.42.1.jar;C:\Users\srivi\.m2\repository\io\opentelemetry\opentelemetry-api-incubator\1.42.1-alpha\opentelemetry-api-incubator-1.42.1-alpha.jar;C:\Users\srivi\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.42.1\opentelemetry-sdk-trace-1.42.1.jar;C:\Users\srivi\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.42.1\opentelemetry-sdk-1.42.1.jar;C:\Users\srivi\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.42.1\opentelemetry-sdk-metrics-1.42.1.jar;C:\Users\srivi\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.42.1\opentelemetry-sdk-logs-1.42.1.jar;C:\Users\srivi\.m2\repository\net\bytebuddy\byte-buddy\1.15.1\byte-buddy-1.15.1.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-os\4.25.0\selenium-os-4.25.0.jar;C:\Users\srivi\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.25.0\selenium-safari-driver-4.25.0.jar;C:\Users\srivi\.m2\repository\org\seleniumhq\selenium\selenium-support\4.25.0\selenium-support-4.25.0.jar;C:\Users\srivi\.m2\repository\org\apache\poi\poi\5.2.5\poi-5.2.5.jar;C:\Users\srivi\.m2\repository\commons-codec\commons-codec\1.16.0\commons-codec-1.16.0.jar;C:\Users\srivi\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\srivi\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\Users\srivi\.m2\repository\com\zaxxer\SparseBitSet\1.3\SparseBitSet-1.3.jar;C:\Users\srivi\.m2\repository\org\apache\poi\poi-ooxml\5.2.5\poi-ooxml-5.2.5.jar;C:\Users\srivi\.m2\repository\org\apache\poi\poi-ooxml-lite\5.2.5\poi-ooxml-lite-5.2.5.jar;C:\Users\srivi\.m2\repository\org\apache\xmlbeans\xmlbeans\5.2.0\xmlbeans-5.2.0.jar;C:\Users\srivi\.m2\repository\org\apache\commons\commons-compress\1.25.0\commons-compress-1.25.0.jar;C:\Users\srivi\.m2\repository\com\github\virtuald\curvesapi\1.08\curvesapi-1.08.jar;C:\Users\srivi\.m2\repository\org\testng\testng\7.10.2\testng-7.10.2.jar;C:\Users\srivi\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\srivi\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\srivi\.m2\repository\com\aventstack\extentreports\5.0.9\extentreports-5.0.9.jar;C:\Users\srivi\.m2\repository\io\reactivex\rxjava3\rxjava\3.0.4\rxjava-3.0.4.jar;C:\Users\srivi\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\srivi\.m2\repository\org\freemarker\freemarker\2.3.30\freemarker-2.3.30.jar;C:\Users\srivi\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;C:\Users\srivi\.m2\repository\tech\grasshopper\extentreports-cucumber7-adapter\1.10.1\extentreports-cucumber7-adapter-1.10.1.jar;C:\Users\srivi\.m2\repository\tech\grasshopper\extent-pdf-report\2.9.1\extent-pdf-report-2.9.1.jar;C:\Users\srivi\.m2\repository\tech\grasshopper\cucumber-pdf-report\2.11.1\cucumber-pdf-report-2.11.1.jar;C:\Users\srivi\.m2\repository\org\apache\pdfbox\pdfbox\2.0.26\pdfbox-2.0.26.jar;C:\Users\srivi\.m2\repository\org\apache\pdfbox\fontbox\2.0.26\fontbox-2.0.26.jar;C:\Users\srivi\.m2\repository\org\knowm\xchart\xchart\3.8.0\xchart-3.8.0.jar;C:\Users\srivi\.m2\repository\de\erichseifert\vectorgraphics2d\VectorGraphics2D\0.13\VectorGraphics2D-0.13.jar;C:\Users\srivi\.m2\repository\de\rototor\pdfbox\graphics2d\0.30\graphics2d-0.30.jar;C:\Users\srivi\.m2\repository\com\madgag\animated-gif-lib\1.4\animated-gif-lib-1.4.jar;C:\Users\srivi\.m2\repository\org\yaml\snakeyaml\1.28\snakeyaml-1.28.jar;C:\Users\srivi\.m2\repository\tech\grasshopper\table-layout\1.5.1\table-layout-1.5.1.jar;C:\Users\srivi\.m2\repository\tech\grasshopper\rest-assured-cucumber-pdf-report\1.4.1\rest-assured-cucumber-pdf-report-1.4.1.jar;C:\Users\srivi\.m2\repository\org\jsoup\jsoup\1.15.3\jsoup-1.15.3.jar;C:\Users\srivi\.m2\repository\com\aventstack\klov-reporter\5.0.9\klov-reporter-5.0.9.jar;C:\Users\srivi\.m2\repository\org\mongodb\mongodb-driver\3.6.4\mongodb-driver-3.6.4.jar;C:\Users\srivi\.m2\repository\org\mongodb\mongodb-driver-core\3.6.4\mongodb-driver-core-3.6.4.jar;C:\Users\srivi\.m2\repository\org\mongodb\bson\3.6.4\bson-3.6.4.jar;C:\Users\srivi\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\srivi\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\srivi\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\srivi\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\srivi\.m2\repository\tech\grasshopper\htmlextentreporter\1.0.1\htmlextentreporter-1.0.1.jar;C:\Users\srivi\.m2\repository\tech\grasshopper\extent-excel-report\1.3.0\extent-excel-report-1.3.0.jar;C:\Users\srivi\.m2\repository\io\cucumber\cucumber-java\7.2.3\cucumber-java-7.2.3.jar;C:\Users\srivi\.m2\repository\io\cucumber\cucumber-core\7.2.3\cucumber-core-7.2.3.jar;C:\Users\srivi\.m2\repository\io\cucumber\cucumber-gherkin\7.2.3\cucumber-gherkin-7.2.3.jar;C:\Users\srivi\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.2.3\cucumber-gherkin-messages-7.2.3.jar;C:\Users\srivi\.m2\repository\io\cucumber\messages\17.1.1\messages-17.1.1.jar;C:\Users\srivi\.m2\repository\io\cucumber\tag-expressions\4.1.0\tag-expressions-4.1.0.jar;C:\Users\srivi\.m2\repository\io\cucumber\cucumber-expressions\15.0.1\cucumber-expressions-15.0.1.jar;C:\Users\srivi\.m2\repository\io\cucumber\datatable\7.2.3\datatable-7.2.3.jar;C:\Users\srivi\.m2\repository\io\cucumber\cucumber-plugin\7.2.3\cucumber-plugin-7.2.3.jar;C:\Users\srivi\.m2\repository\io\cucumber\docstring\7.2.3\docstring-7.2.3.jar;C:\Users\srivi\.m2\repository\io\cucumber\html-formatter\17.0.0\html-formatter-17.0.0.jar;C:\Users\srivi\.m2\repository\io\cucumber\ci-environment\8.1.0\ci-environment-8.1.0.jar;C:\Users\srivi\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\srivi\.m2\repository\io\qameta\allure\allure-testng\2.29.0\allure-testng-2.29.0.jar;C:\Users\srivi\.m2\repository\io\qameta\allure\allure-java-commons\2.29.0\allure-java-commons-2.29.0.jar;C:\Users\srivi\.m2\repository\io\qameta\allure\allure-model\2.29.0\allure-model-2.29.0.jar;C:\Users\srivi\.m2\repository\io\qameta\allure\allure-test-filter\2.29.0\allure-test-filter-2.29.0.jar;C:\Users\srivi\.m2\repository\org\apache\logging\log4j\log4j-core\2.20.0\log4j-core-2.20.0.jar;C:\Users\srivi\.m2\repository\org\apache\logging\log4j\log4j-api\2.20.0\log4j-api-2.20.0.jar;C:\Users\srivi\.m2\repository\org\slf4j\slf4j-api\2.0.7\slf4j-api-2.0.7.jar;C:\Users\srivi\.m2\repository\org\slf4j\slf4j-simple\2.0.7\slf4j-simple-2.0.7.jar;C:\Users\srivi\.m2\repository\commons-io\commons-io\2.16.1\commons-io-2.16.1.jar;C:\Users\srivi\.m2\repository\picocontainer\picocontainer\3\picocontainer-3.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\srivi"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-07-16"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-22"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\srivi\eclipse-workspace\DsAlgo-Testng"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\srivi\AppData\Local\Temp\surefire18221030915818628697\surefirebooter13064979731351084424.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="22.0.2+9-70"/>
+    <property name="user.name" value="srivi"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\srivi\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\srivi\AppData\Local\Temp\"/>
+    <property name="java.version" value="22.0.2"/>
+    <property name="user.dir" value="C:\Users\srivi\eclipse-workspace\DsAlgo-Testng"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-22\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jdk-22/bin/server;C:/Program Files/Java/jdk-22/bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\DTS\Binn\;C:\Users\srivi\Downloads\apache-maven-3.9.9-bin\apache-maven-3.9.9\bin;C:\Program Files\Java\jdk-22\bin;C:\Users\srivi\Downloads\allure-2.30.0\allure-2.30.0\bin;C:\Users\srivi\AppData\Local\Microsoft\WindowsApps;C:\Users\srivi\AppData\Local\GitHubDesktop\bin;C:\Users\srivi\AppData\Roaming\npm;C:\Users\srivi\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\srivi\.dotnet\tools;C:\Users\srivi\OneDrive\Desktop;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="22.0.2+9-70"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="66.0"/>
+  </properties>
+  <testcase name="testGetStarted" classname="tests.LandingPageTests" time="2.179">
+    <system-out><![CDATA[[INFO ] 2024-11-25 09:44:52.633 [main] LogHelper - Browser value from Testng Xml file:chrome
+[INFO ] 2024-11-25 09:44:52.640 [main] LogHelper - Config Reader browser value: chrome
+[INFO ] 2024-11-25 09:44:52.642 [main] LogHelper - Browser value inside SetDriver method in TestContext:chrome
+[INFO ] 2024-11-25 09:45:01.136 [main] LogHelper - Chrome Driver is created
+[INFO ] 2024-11-25 09:45:02.885 [main] LogHelper - Current page is https://dsportalapp.herokuapp.com/
+[INFO ] 2024-11-25 09:45:05.165 [main] LogHelper - Current page is https://dsportalapp.herokuapp.com/home
+]]></system-out>
+    <system-err><![CDATA[[main] WARN org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
+[main] WARN org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
+[main] WARN org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
+Nov 25, 2024 9:45:01 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 131, returning the closest version; found: 129; Please update to a Selenium version that supports CDP version 131
+]]></system-err>
+  </testcase>
+  <testcase name="testGetStarted" classname="tests.LandingPageTests" time="0.907">
+    <system-out><![CDATA[[INFO ] 2024-11-25 09:45:52.158 [main] LogHelper - Quitting WebDriver instance: ChromeDriver: chrome on windows (96ce25a0cb3ed5749c3a13394ae12c37)
+[INFO ] 2024-11-25 09:45:52.657 [main] LogHelper - Browser value from Testng Xml file:edge
+[INFO ] 2024-11-25 09:45:52.658 [main] LogHelper - Config Reader browser value: edge
+[INFO ] 2024-11-25 09:45:52.658 [main] LogHelper - Browser value inside SetDriver method in TestContext:edge
+[INFO ] 2024-11-25 09:45:56.826 [main] LogHelper - Edge Driver is created
+[INFO ] 2024-11-25 09:45:57.553 [main] LogHelper - Current page is https://dsportalapp.herokuapp.com/
+[INFO ] 2024-11-25 09:45:58.466 [main] LogHelper - Current page is https://dsportalapp.herokuapp.com/home
+]]></system-out>
+    <system-err><![CDATA[Nov 25, 2024 9:45:56 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 131, returning the closest version; found: 129; Please update to a Selenium version that supports CDP version 131
+]]></system-err>
+  </testcase>
+  <testcase name="testGetStarted" classname="tests.LandingPageTests" time="0.897">
+    <system-out><![CDATA[[INFO ] 2024-11-25 09:46:33.848 [main] LogHelper - Quitting WebDriver instance: EdgeDriver: MicrosoftEdge on windows (84924b23c093b6acecae5a7a002f04a2)
+[INFO ] 2024-11-25 09:46:35.395 [main] LogHelper - Browser value from Testng Xml file:firefox
+[INFO ] 2024-11-25 09:46:35.395 [main] LogHelper - Config Reader browser value: firefox
+[INFO ] 2024-11-25 09:46:35.395 [main] LogHelper - Browser value inside SetDriver method in TestContext:firefox
+[INFO ] 2024-11-25 09:46:41.060 [main] LogHelper - Firefox Driver is created
+[INFO ] 2024-11-25 09:46:41.983 [main] LogHelper - Current page is https://dsportalapp.herokuapp.com/
+[INFO ] 2024-11-25 09:46:42.885 [main] LogHelper - Current page is https://dsportalapp.herokuapp.com/home
+]]></system-out>
+  </testcase>
+  <testcase name="testLandingPageLoadsSuccessfully" classname="tests.LandingPageTests" time="0.047">
+    <system-out><![CDATA[[INFO ] 2024-11-25 09:45:05.416 [main] LogHelper - Current page is https://dsportalapp.herokuapp.com/
+[INFO ] 2024-11-25 09:45:05.464 [main] LogHelper - Current page is https://dsportalapp.herokuapp.com/
+]]></system-out>
+  </testcase>
+  <testcase name="testLandingPageLoadsSuccessfully" classname="tests.LandingPageTests" time="0.05">
+    <system-out><![CDATA[[INFO ] 2024-11-25 09:45:58.635 [main] LogHelper - Current page is https://dsportalapp.herokuapp.com/
+[INFO ] 2024-11-25 09:45:58.689 [main] LogHelper - Current page is https://dsportalapp.herokuapp.com/
+]]></system-out>
+  </testcase>
+  <testcase name="testLandingPageLoadsSuccessfully" classname="tests.LandingPageTests" time="0.021">
+    <system-out><![CDATA[[INFO ] 2024-11-25 09:46:43.165 [main] LogHelper - Current page is https://dsportalapp.herokuapp.com/
+[INFO ] 2024-11-25 09:46:43.185 [main] LogHelper - Current page is https://dsportalapp.herokuapp.com/
+]]></system-out>
+  </testcase>
+  <testcase name="shouldNavigateToGraphPageFromTopicsCovered" classname="tests.GraphPageTests" time="0.483">
+    <system-out><![CDATA[[INFO ] 2024-11-25 09:45:05.473 [main] LogHelper - Quitting WebDriver instance: ChromeDriver: chrome on windows (726108ef724963a360957c73d540b23b)
+[INFO ] 2024-11-25 09:45:05.695 [main] LogHelper - Browser value from Testng Xml file:chrome
+[INFO ] 2024-11-25 09:45:05.695 [main] LogHelper - Config Reader browser value: chrome
+[INFO ] 2024-11-25 09:45:05.695 [main] LogHelper - Browser value inside SetDriver method in TestContext:chrome
+[INFO ] 2024-11-25 09:45:08.715 [main] LogHelper - Chrome Driver is created
+[INFO ] 2024-11-25 09:45:11.086 [main] LogHelper - Navigated to Graph page: https://dsportalapp.herokuapp.com/graph/
+[INFO ] 2024-11-25 09:45:11.573 [main] LogHelper - Current page is: https://dsportalapp.herokuapp.com/graph/graph/
+]]></system-out>
+    <system-err><![CDATA[Nov 25, 2024 9:45:08 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 131, returning the closest version; found: 129; Please update to a Selenium version that supports CDP version 131
+]]></system-err>
+  </testcase>
+  <testcase name="shouldNavigateToGraphPageFromTopicsCovered" classname="tests.GraphPageTests" time="0.479">
+    <system-out><![CDATA[[INFO ] 2024-11-25 09:45:58.694 [main] LogHelper - Quitting WebDriver instance: EdgeDriver: MicrosoftEdge on windows (263e520ab160db56e80d1cfc4556dd18)
+[INFO ] 2024-11-25 09:46:00.153 [main] LogHelper - Browser value from Testng Xml file:edge
+[INFO ] 2024-11-25 09:46:00.154 [main] LogHelper - Config Reader browser value: edge
+[INFO ] 2024-11-25 09:46:00.154 [main] LogHelper - Browser value inside SetDriver method in TestContext:edge
+[INFO ] 2024-11-25 09:46:03.931 [main] LogHelper - Edge Driver is created
+[INFO ] 2024-11-25 09:46:06.502 [main] LogHelper - Navigated to Graph page: https://dsportalapp.herokuapp.com/graph/
+[INFO ] 2024-11-25 09:46:07.033 [main] LogHelper - Current page is: https://dsportalapp.herokuapp.com/graph/graph/
+]]></system-out>
+    <system-err><![CDATA[Nov 25, 2024 9:46:03 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 131, returning the closest version; found: 129; Please update to a Selenium version that supports CDP version 131
+]]></system-err>
+  </testcase>
+  <testcase name="shouldNavigateToGraphPageFromTopicsCovered" classname="tests.GraphPageTests" time="0.406">
+    <system-out><![CDATA[[INFO ] 2024-11-25 09:46:43.191 [main] LogHelper - Quitting WebDriver instance: FirefoxDriver: firefox on windows (0b3e78d7-458f-4a66-a015-8269d8baa22d)
+[INFO ] 2024-11-25 09:46:46.071 [main] LogHelper - Browser value from Testng Xml file:firefox
+[INFO ] 2024-11-25 09:46:46.071 [main] LogHelper - Config Reader browser value: firefox
+[INFO ] 2024-11-25 09:46:46.071 [main] LogHelper - Browser value inside SetDriver method in TestContext:firefox
+[INFO ] 2024-11-25 09:46:50.012 [main] LogHelper - Firefox Driver is created
+[INFO ] 2024-11-25 09:46:52.347 [main] LogHelper - Navigated to Graph page: https://dsportalapp.herokuapp.com/graph/
+[INFO ] 2024-11-25 09:46:52.765 [main] LogHelper - Current page is: https://dsportalapp.herokuapp.com/graph/graph/
+]]></system-out>
+  </testcase>
+  <testcase name="shouldNavigateToGraphRepresentationsPageFromGraph" classname="tests.GraphPageTests" time="0.71">
+    <system-out><![CDATA[[INFO ] 2024-11-25 09:45:12.956 [main] LogHelper - Navigated to Graph page: https://dsportalapp.herokuapp.com/graph/
+[INFO ] 2024-11-25 09:45:13.667 [main] LogHelper - Current page is: https://dsportalapp.herokuapp.com/graph/graph-representations/
+]]></system-out>
+  </testcase>
+  <testcase name="shouldNavigateToGraphRepresentationsPageFromGraph" classname="tests.GraphPageTests" time="0.765">
+    <system-out><![CDATA[[INFO ] 2024-11-25 09:46:08.561 [main] LogHelper - Navigated to Graph page: https://dsportalapp.herokuapp.com/graph/
+[INFO ] 2024-11-25 09:46:09.326 [main] LogHelper - Current page is: https://dsportalapp.herokuapp.com/graph/graph-representations/
+]]></system-out>
+  </testcase>
+  <testcase name="shouldNavigateToGraphRepresentationsPageFromGraph" classname="tests.GraphPageTests" time="0.741">
+    <system-out><![CDATA[[INFO ] 2024-11-25 09:46:53.978 [main] LogHelper - Navigated to Graph page: https://dsportalapp.herokuapp.com/graph/
+[INFO ] 2024-11-25 09:46:54.718 [main] LogHelper - Current page is: https://dsportalapp.herokuapp.com/graph/graph-representations/
+]]></system-out>
+  </testcase>
+  <testcase name="shouldNavigateToGraphRepresentationsPageFromTopicsCovered" classname="tests.GraphPageTests" time="0.532">
+    <system-out><![CDATA[[INFO ] 2024-11-25 09:45:14.917 [main] LogHelper - Navigated to Graph page: https://dsportalapp.herokuapp.com/graph/
+[INFO ] 2024-11-25 09:45:15.449 [main] LogHelper - Current page is: https://dsportalapp.herokuapp.com/graph/graph-representations/
+]]></system-out>
+  </testcase>
+  <testcase name="shouldNavigateToGraphRepresentationsPageFromTopicsCovered" classname="tests.GraphPageTests" time="0.58">
+    <system-out><![CDATA[[INFO ] 2024-11-25 09:46:11.035 [main] LogHelper - Navigated to Graph page: https://dsportalapp.herokuapp.com/graph/
+[INFO ] 2024-11-25 09:46:11.618 [main] LogHelper - Current page is: https://dsportalapp.herokuapp.com/graph/graph-representations/
+]]></system-out>
+  </testcase>
+  <testcase name="shouldNavigateToGraphRepresentationsPageFromTopicsCovered" classname="tests.GraphPageTests" time="0.354">
+    <system-out><![CDATA[[INFO ] 2024-11-25 09:46:56.332 [main] LogHelper - Navigated to Graph page: https://dsportalapp.herokuapp.com/graph/
+[INFO ] 2024-11-25 09:46:56.686 [main] LogHelper - Current page is: https://dsportalapp.herokuapp.com/graph/graph-representations/
+]]></system-out>
+  </testcase>
+  <testcase name="shouldNavigateToPracticeQuestionsPageFromGraphRepresentations" classname="tests.GraphPageTests" time="11.247">
+    <failure message="functionality not implemented" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: functionality not implemented
+	at tests.GraphPageTests.assertPageUrlAndHeading(GraphPageTests.java:78)
+	at tests.GraphPageTests.shouldNavigateToPracticeQuestionsPageFromGraphRepresentations(GraphPageTests.java:57)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //strong//p[contains(@class,'bg-secondary')]' (tried for 10 second(s) with 500 milliseconds interval)
+	at tests.GraphPageTests.assertPageUrlAndHeading(GraphPageTests.java:78)
+	at tests.GraphPageTests.shouldNavigateToPracticeQuestionsPageFromGraphRepresentations(GraphPageTests.java:57)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//strong//p[contains(@class,'bg-secondary')]"}
+  (Session info: chrome=131.0.6778.86)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [872d8b22f0920c5316970563e97bd3b7, findElement {value=//strong//p[contains(@class,'bg-secondary')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\srivi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52283}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52283/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 872d8b22f0920c5316970563e97bd3b7
+	at tests.GraphPageTests.assertPageUrlAndHeading(GraphPageTests.java:78)
+	at tests.GraphPageTests.shouldNavigateToPracticeQuestionsPageFromGraphRepresentations(GraphPageTests.java:57)
+]]></failure>
+    <system-out><![CDATA[[INFO ] 2024-11-25 09:45:16.902 [main] LogHelper - Navigated to Graph page: https://dsportalapp.herokuapp.com/graph/
+[ERROR] 2024-11-25 09:45:27.877 [main] LogHelper - Page heading element is missing. This indicates a missing functionality.
+]]></system-out>
+  </testcase>
+  <testcase name="shouldNavigateToPracticeQuestionsPageFromGraphRepresentations" classname="tests.GraphPageTests" time="11.163">
+    <failure message="functionality not implemented" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: functionality not implemented
+	at tests.GraphPageTests.assertPageUrlAndHeading(GraphPageTests.java:78)
+	at tests.GraphPageTests.shouldNavigateToPracticeQuestionsPageFromGraphRepresentations(GraphPageTests.java:57)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //strong//p[contains(@class,'bg-secondary')]' (tried for 10 second(s) with 500 milliseconds interval)
+	at tests.GraphPageTests.assertPageUrlAndHeading(GraphPageTests.java:78)
+	at tests.GraphPageTests.shouldNavigateToPracticeQuestionsPageFromGraphRepresentations(GraphPageTests.java:57)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//strong//p[contains(@class,'bg-secondary')]"}
+  (Session info: MicrosoftEdge=131.0.2903.63)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [84924b23c093b6acecae5a7a002f04a2, findElement {value=//strong//p[contains(@class,'bg-secondary')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 131.0.2903.63, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:52511}, msedge: {msedgedriverVersion: 131.0.2903.63 (3cf4b3e782aa..., userDataDir: C:\Users\srivi\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52511/devtoo..., se:cdpVersion: 131.0.2903.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 84924b23c093b6acecae5a7a002f04a2
+	at tests.GraphPageTests.assertPageUrlAndHeading(GraphPageTests.java:78)
+	at tests.GraphPageTests.shouldNavigateToPracticeQuestionsPageFromGraphRepresentations(GraphPageTests.java:57)
+]]></failure>
+    <system-out><![CDATA[[INFO ] 2024-11-25 09:46:13.713 [main] LogHelper - Navigated to Graph page: https://dsportalapp.herokuapp.com/graph/
+[ERROR] 2024-11-25 09:46:24.993 [main] LogHelper - Page heading element is missing. This indicates a missing functionality.
+]]></system-out>
+  </testcase>
+  <testcase name="shouldNavigateToPracticeQuestionsPageFromGraphRepresentations" classname="tests.GraphPageTests" time="10.931">
+    <failure message="functionality not implemented" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: functionality not implemented
+	at tests.GraphPageTests.assertPageUrlAndHeading(GraphPageTests.java:78)
+	at tests.GraphPageTests.shouldNavigateToPracticeQuestionsPageFromGraphRepresentations(GraphPageTests.java:57)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //strong//p[contains(@class,'bg-secondary')]' (tried for 10 second(s) with 500 milliseconds interval)
+	at tests.GraphPageTests.assertPageUrlAndHeading(GraphPageTests.java:78)
+	at tests.GraphPageTests.shouldNavigateToPracticeQuestionsPageFromGraphRepresentations(GraphPageTests.java:57)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: //strong//p[contains(@class,'bg-secondary')]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [60cbdf22-fc15-490f-aa5f-2172f7f8fb54, findElement {value=//strong//p[contains(@class,'bg-secondary')], using=xpath}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 132.0.2, moz:accessibilityChecks: false, moz:buildID: 20241110231641, moz:debuggerAddress: 127.0.0.1:7869, moz:geckodriverVersion: 0.35.0, moz:headless: true, moz:platformVersion: 10.0, moz:processID: 13640, moz:profile: C:\Users\srivi\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:7869/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 60cbdf22-fc15-490f-aa5f-2172f7f8fb54
+	at tests.GraphPageTests.assertPageUrlAndHeading(GraphPageTests.java:78)
+	at tests.GraphPageTests.shouldNavigateToPracticeQuestionsPageFromGraphRepresentations(GraphPageTests.java:57)
+]]></failure>
+    <system-out><![CDATA[[INFO ] 2024-11-25 09:46:57.786 [main] LogHelper - Navigated to Graph page: https://dsportalapp.herokuapp.com/graph/
+[ERROR] 2024-11-25 09:47:08.712 [main] LogHelper - Page heading element is missing. This indicates a missing functionality.
+]]></system-out>
+  </testcase>
+  <testcase name="shouldNavigateToTryEditorFromGraph" classname="tests.GraphPageTests" time="2.16">
+    <system-out><![CDATA[[INFO ] 2024-11-25 09:45:30.449 [main] LogHelper - Navigated to Graph page: https://dsportalapp.herokuapp.com/graph/
+[INFO ] 2024-11-25 09:45:32.495 [main] LogHelper - Navigated to Try Editor: https://dsportalapp.herokuapp.com/tryEditor
+]]></system-out>
+  </testcase>
+  <testcase name="shouldNavigateToTryEditorFromGraph" classname="tests.GraphPageTests" time="1.553">
+    <system-out><![CDATA[[INFO ] 2024-11-25 09:46:27.175 [main] LogHelper - Navigated to Graph page: https://dsportalapp.herokuapp.com/graph/
+[INFO ] 2024-11-25 09:46:28.732 [main] LogHelper - Navigated to Try Editor: https://dsportalapp.herokuapp.com/tryEditor
+]]></system-out>
+  </testcase>
+  <testcase name="shouldNavigateToTryEditorFromGraph" classname="tests.GraphPageTests" time="1.848">
+    <system-out><![CDATA[[INFO ] 2024-11-25 09:47:09.799 [main] LogHelper - Navigated to Graph page: https://dsportalapp.herokuapp.com/graph/
+[INFO ] 2024-11-25 09:47:11.675 [main] LogHelper - Navigated to Try Editor: https://dsportalapp.herokuapp.com/tryEditor
+]]></system-out>
+  </testcase>
+  <testcase name="shouldNavigateToTryEditorFromGraphRepresentations" classname="tests.GraphPageTests" time="2.312">
+    <system-out><![CDATA[[INFO ] 2024-11-25 09:45:34.809 [main] LogHelper - Navigated to Graph page: https://dsportalapp.herokuapp.com/graph/
+[INFO ] 2024-11-25 09:45:37.034 [main] LogHelper - Navigated to Try Editor: https://dsportalapp.herokuapp.com/tryEditor
+]]></system-out>
+  </testcase>
+  <testcase name="shouldNavigateToTryEditorFromGraphRepresentations" classname="tests.GraphPageTests" time="0.9">
+    <system-out><![CDATA[[INFO ] 2024-11-25 09:46:30.695 [main] LogHelper - Navigated to Graph page: https://dsportalapp.herokuapp.com/graph/
+[INFO ] 2024-11-25 09:46:31.593 [main] LogHelper - Navigated to Try Editor: https://dsportalapp.herokuapp.com/tryEditor
+]]></system-out>
+  </testcase>
+  <testcase name="shouldNavigateToTryEditorFromGraphRepresentations" classname="tests.GraphPageTests" time="0.743">
+    <system-out><![CDATA[[INFO ] 2024-11-25 09:47:13.083 [main] LogHelper - Navigated to Graph page: https://dsportalapp.herokuapp.com/graph/
+[INFO ] 2024-11-25 09:47:13.825 [main] LogHelper - Navigated to Try Editor: https://dsportalapp.herokuapp.com/tryEditor
+]]></system-out>
+  </testcase>
+  <testcase name="shouldLoadGraphHomePageSuccessfully" classname="tests.GraphPageTests" time="0.036">
+    <system-out><![CDATA[[INFO ] 2024-11-25 09:45:39.662 [main] LogHelper - Navigated to Graph page: https://dsportalapp.herokuapp.com/graph/
+[INFO ] 2024-11-25 09:45:39.699 [main] LogHelper - Current page is https://dsportalapp.herokuapp.com/graph/
+]]></system-out>
+  </testcase>
+  <testcase name="shouldLoadGraphHomePageSuccessfully" classname="tests.GraphPageTests" time="0.033">
+    <system-out><![CDATA[[INFO ] 2024-11-25 09:46:33.810 [main] LogHelper - Navigated to Graph page: https://dsportalapp.herokuapp.com/graph/
+[INFO ] 2024-11-25 09:46:33.843 [main] LogHelper - Current page is https://dsportalapp.herokuapp.com/graph/
+]]></system-out>
+  </testcase>
+  <testcase name="shouldLoadGraphHomePageSuccessfully" classname="tests.GraphPageTests" time="0.022">
+    <system-out><![CDATA[[INFO ] 2024-11-25 09:47:14.920 [main] LogHelper - Navigated to Graph page: https://dsportalapp.herokuapp.com/graph/
+[INFO ] 2024-11-25 09:47:14.945 [main] LogHelper - Current page is https://dsportalapp.herokuapp.com/graph/
+]]></system-out>
+  </testcase>
+  <testcase name="shouldRunInvalidPythonCode" classname="tests.TryEditorPageTests" time="0.548">
+    <system-out><![CDATA[[INFO ] 2024-11-25 09:45:39.704 [main] LogHelper - Quitting WebDriver instance: ChromeDriver: chrome on windows (872d8b22f0920c5316970563e97bd3b7)
+[INFO ] 2024-11-25 09:45:40.065 [main] LogHelper - Browser value from Testng Xml file:chrome
+[INFO ] 2024-11-25 09:45:40.065 [main] LogHelper - Config Reader browser value: chrome
+[INFO ] 2024-11-25 09:45:40.065 [main] LogHelper - Browser value inside SetDriver method in TestContext:chrome
+[INFO ] 2024-11-25 09:45:44.455 [main] LogHelper - Chrome Driver is created
+[INFO ] 2024-11-25 09:45:48.747 [main] LogHelper - Navigated to Try Editor page: https://dsportalapp.herokuapp.com/tryEditor
+[INFO ] 2024-11-25 09:45:49.266 [main] LogHelper - Checking for alert. WebDriver instance: ChromeDriver: chrome on windows (96ce25a0cb3ed5749c3a13394ae12c37), Thread ID: 1
+[INFO ] 2024-11-25 09:45:49.301 [main] LogHelper - Alert message received: NameError: name 'hello' is not defined on line 1
+[INFO ] 2024-11-25 09:45:49.301 [main] LogHelper - Comparing the alert message with the expected output: NameError: name 'hello' is not defined on line 1
+]]></system-out>
+    <system-err><![CDATA[Nov 25, 2024 9:45:44 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 131, returning the closest version; found: 129; Please update to a Selenium version that supports CDP version 131
+]]></system-err>
+  </testcase>
+  <testcase name="shouldRunValidPythonCode" classname="tests.TryEditorPageTests" time="0.561">
+    <system-out><![CDATA[[INFO ] 2024-11-25 09:45:51.589 [main] LogHelper - Navigated to Try Editor page: https://dsportalapp.herokuapp.com/tryEditor
+[INFO ] 2024-11-25 09:45:52.151 [main] LogHelper - Actual Output: hello
+[INFO ] 2024-11-25 09:45:52.152 [main] LogHelper - Comparing the actual output with the expected output: hello
+]]></system-out>
+  </testcase>
+</testsuite>
