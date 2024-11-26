@@ -1,33 +1,28 @@
 package data;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import org.testng.annotations.DataProvider;
 
-import utils.ConfigReader;
-import utils.ExcelReader;
-import utils.LogHelper;
+public class LoginDataProvider {
 
-public class LoginDataProvider extends DataProvider {
+    private static final String LOGIN_SHEET = "loginSheet";
 
-	private List<Map<String, String>> loginData;
-	private static String LOGIN_SHEET = "loginSheet";
+    @DataProvider(name = "validLoginDataProvider")
+    public static Object[][] validLoginDataProvider() throws IOException {
+        Object[][] data = DsAlgoDataProvider.loadDataFromExcelForDataProvider(LOGIN_SHEET);
+        // Return only the first row for valid login data
+        return new Object[][] { data[0] };
+    }
+    
+    @DataProvider(name = "invalidLoginDataProvider")
+    public static Object[][] invalidLoginDataProvider() throws IOException {
+        Object[][] data = DsAlgoDataProvider.loadDataFromExcelForDataProvider(LOGIN_SHEET);
 
-	public LoginDataProvider() throws IOException {
-		this.loginData = new ArrayList<>();
-
-		// Load login data
-		loadDataFromExcel(LOGIN_SHEET, loginData);
-	}	
-
-	public Map<String, String> getValidLoginData() {
-		return loginData.getFirst(); // first row has valid login
-	}
-
-	public List<Map<String, String>> getInvalidLoginData() {
-		return loginData.subList(1, loginData.size());// get from second row onwards for invalid login data
-	}
-
+        // Exclude the first row and return the rest for invalid login data
+        Object[][] invalidData = new Object[data.length - 1][1];
+        for (int i = 1; i < data.length; i++) {
+            invalidData[i - 1] = data[i];
+        }
+        return invalidData;
+    }
 }

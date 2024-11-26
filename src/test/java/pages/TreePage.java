@@ -55,7 +55,10 @@ public class TreePage extends BasePage {
 	private WebElement practiceQuestionsLink;
 
 	@FindBy(xpath = "//strong//p[contains(@class,'bg-secondary')]")
-	private WebElement pageTitle;
+	private WebElement pageHeading;
+	
+	@FindBy(xpath = "//a[@href='/tryEditor']")
+	private WebElement tryEditorLink;
 
 	public void clickItemUnderTopicsCovered(String itemName) {
 		WebElement item = driver
@@ -127,11 +130,16 @@ public class TreePage extends BasePage {
 		WebDriverWaitUtility.waitForElementToBeClickable(practiceQuestionsLink);
 		practiceQuestionsLink.click();
 	}
+	
+	public void clickTryHereButton() {
+		WebDriverWaitUtility.waitForElementToBeClickable(tryEditorLink);
+		tryEditorLink.click();
+	}
 
-	public String getPageTitle() {
+	public String getPageHeading() {
 		try {
-			WebDriverWaitUtility.waitForElementToBeVisible(pageTitle);
-			return pageTitle.getText();
+			WebDriverWaitUtility.waitForElementToBeVisible(pageHeading);
+			return pageHeading.getText();
 		} catch (TimeoutException e) {
 			LogHelper.error("Page heading element is missing. This indicates a missing functionality.");
 			throw new AssertionError("functionality not implemented", e);

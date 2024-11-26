@@ -1,28 +1,28 @@
 package data;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import org.testng.annotations.DataProvider;
 
-public class TryEditorDataProvider extends DataProvider{
-	
-	private List<Map<String, String>> tryEditorData;
-	private static String TRY_EDITOR_SHEET = "pythonCode";
+public class TryEditorDataProvider {
 
-	public TryEditorDataProvider() throws IOException {
-		this.tryEditorData = new ArrayList<>();
+    private static final String TRY_EDITOR_SHEET = "pythonCode";
+    
+    @DataProvider(name = "validTryEditorDataProvider")
+    public static Object[][] validTryEditorDataProvider() throws IOException {
+        Object[][] data = DsAlgoDataProvider.loadDataFromExcelForDataProvider(TRY_EDITOR_SHEET);
+        // Return only the first row for valid try editor data
+        return new Object[][] { data[0] };
+    }
 
-		// Load login data
-		loadDataFromExcel(TRY_EDITOR_SHEET, tryEditorData);
-	}	
+    @DataProvider(name = "invalidTryEditorDataProvider")
+    public static Object[][] invalidTryEditorDataProvider() throws IOException {
+        Object[][] data = DsAlgoDataProvider.loadDataFromExcelForDataProvider(TRY_EDITOR_SHEET);
 
-	public Map<String, String> getValidPythonCode() {
-		return tryEditorData.getFirst(); // first row has valid data
-	}
-
-	public List<Map<String, String>> getInvalidPythonCode() {
-		return tryEditorData.subList(1, tryEditorData.size());// get from second row onwards for invalid data
-	}
-
+        // Exclude the first row and return the rest for invalid data
+        Object[][] invalidData = new Object[data.length - 1][1];
+        for (int i = 1; i < data.length; i++) {
+            invalidData[i - 1] = data[i];
+        }
+        return invalidData;
+    }
 }

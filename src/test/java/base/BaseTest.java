@@ -22,11 +22,10 @@ public class BaseTest {
 	protected TestContext testContext;
 	protected LoginPage loginPage;
 	protected HomePage homePage;
-	LoginDataProvider loginDataProvider;
 
 	@Parameters("browser")
 	@BeforeClass(alwaysRun = true)
-//	 @BeforeClass Runs Before All @Test methods, Frequency: Runs once per class 
+//	 @BeforeClass Runs Before All @Test methods, Frequency: Runs once per class 	
 	public void setupTest(@Optional String browser) throws IOException {
 		LogHelper.info("Browser value from Testng Xml file:" + browser);
 
@@ -39,14 +38,15 @@ public class BaseTest {
 		testContext.setDriver(ConfigReader.getBrowser());
 		WebDriver driver = testContext.getdriver();
 		WebDriverWaitUtility.initializeWait(driver, ConfigReader.getWebDriverWaitTimeout());
-
-		loginDataProvider = new LoginDataProvider();
 	}
 
 	protected void login() throws IOException {
 
 		// Retrieve valid login credentials
-		Map<String, String> validCredentials = loginDataProvider.getValidLoginData();
+		Object[][] validCredentialsArray = LoginDataProvider.validLoginDataProvider();
+		
+		@SuppressWarnings("unchecked")
+		Map<String, String> validCredentials = (Map<String, String>) validCredentialsArray[0][0];
 
 		String username = validCredentials.get("username");
 		String password = validCredentials.get("password");
