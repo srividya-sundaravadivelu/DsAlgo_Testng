@@ -1,27 +1,16 @@
 package pages;
 
-import java.util.List;
-import java.util.Map;
 import java.util.NoSuchElementException;
 
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import io.cucumber.datatable.DataTable;
-import utils.LogHelper;
 import utils.WebDriverWaitUtility;
 
 public class RegisterPage extends BasePage {
 
-	// Anjali
-
-	public RegisterPage(WebDriver driver) {
-		super(driver);
-	}
-     
-	@FindBy(xpath ="//a[@href='/home']")
+ 	@FindBy(xpath ="//a[@href='/home']")
 	private WebElement getstarted;
 	
 	@FindBy(xpath = "//a[contains(text(),' Register ')]")
@@ -128,35 +117,35 @@ public class RegisterPage extends BasePage {
 	}
 	// Enter username PW and Con PW method for DataTable 
 	
-	public void validname(DataTable dataTable) {
-		List<Map<String,String>> userdetail = dataTable.asMaps(String.class,String.class);
-		for (Map<String,String> form : userdetail) {
-			
-			String userName = form.get("username");
-			LogHelper.info("The user enter username as :"+ userName);
-			usernamebox.sendKeys(userName);
-		}
-	}
-			
-		public void validPw(DataTable dataTable) {
-			List<Map<String,String>> userdetail = dataTable.asMaps(String.class,String.class);
-			for (Map<String,String> form : userdetail) {
-				
-				String password = form.get("password");
-				LogHelper.info("The user enter username as :"+ password);
-				usernamebox.sendKeys(password);
-			}
-		}
-			
-			public void validConfPw(DataTable dataTable) {
-				List<Map<String,String>> userdetail = dataTable.asMaps(String.class,String.class);
-				for (Map<String,String> form : userdetail) {
-					
-					String cpassword = form.get("Password confirmation");
-					LogHelper.info("The user enter username as :"+ cpassword);
-					usernamebox.sendKeys(cpassword);
-				}
-	}
+//	public void validname(DataTable dataTable) {
+//		List<Map<String,String>> userdetail = dataTable.asMaps(String.class,String.class);
+//		for (Map<String,String> form : userdetail) {
+//			
+//			String userName = form.get("username");
+//			LogHelper.info("The user enter username as :"+ userName);
+//			usernamebox.sendKeys(userName);
+//		}
+//	}
+//			
+//		public void validPw(DataTable dataTable) {
+//			List<Map<String,String>> userdetail = dataTable.asMaps(String.class,String.class);
+//			for (Map<String,String> form : userdetail) {
+//				
+//				String password = form.get("password");
+//				LogHelper.info("The user enter username as :"+ password);
+//				usernamebox.sendKeys(password);
+//			}
+//		}
+//			
+//			public void validConfPw(DataTable dataTable) {
+//				List<Map<String,String>> userdetail = dataTable.asMaps(String.class,String.class);
+//				for (Map<String,String> form : userdetail) {
+//					
+//					String cpassword = form.get("Password confirmation");
+//					LogHelper.info("The user enter username as :"+ cpassword);
+//					usernamebox.sendKeys(cpassword);
+//				}
+//	}
 	 
 		
 		// Register title method

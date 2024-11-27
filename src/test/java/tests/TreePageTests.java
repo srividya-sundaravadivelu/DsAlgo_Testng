@@ -1,8 +1,6 @@
 package tests;
 
 import java.io.IOException;
-import java.util.Map;
-
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -20,7 +18,7 @@ public class TreePageTests extends BaseTest {
 	@BeforeMethod
 	public void treeSetupBeforeMethod() throws IOException {		
 		login();
-		treePage = testContext.getTreePage();
+		treePage = new TreePage();
 		treePage.navigateToPage(ConfigReader.getTreeUrl());
 		LogHelper.info("Navigated to Tree page: " + treePage.getCurrentUrl());
 	}

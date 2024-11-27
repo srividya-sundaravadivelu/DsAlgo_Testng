@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.time.Duration;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -16,10 +15,6 @@ import utils.LogHelper;
 import utils.WebDriverWaitUtility;
 
 public class TryEditorPage extends BasePage {
-
-	public TryEditorPage(WebDriver driver) {
-		super(driver);
-	}
 
 	@FindBy(xpath = "//button[text()='Run']")
 	private WebElement runButton;

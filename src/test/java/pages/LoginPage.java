@@ -4,8 +4,6 @@ import java.io.IOException;
 
 import org.openqa.selenium.JavascriptExecutor;
 
-import org.openqa.selenium.WebDriver;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 //import org.testng.Assert;
@@ -16,10 +14,6 @@ import utils.LogHelper;
 import utils.WebDriverWaitUtility;
 
 public class LoginPage extends BasePage {
-
-	public LoginPage(WebDriver driver) {
-		super(driver);
-	}
 
 	@FindBy(id = "id_username")
 	private WebElement usernameField;
@@ -56,7 +50,7 @@ public class LoginPage extends BasePage {
 		
 		WebDriverWaitUtility.waitForElementToBeClickable(loginButton);
 		loginButton.click();
-		return new HomePage(driver);
+		return new HomePage();
 	}
 
 	public void clickRegisterlink() {

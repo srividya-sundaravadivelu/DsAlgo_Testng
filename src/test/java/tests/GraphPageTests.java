@@ -1,10 +1,7 @@
 package tests;
 
 import java.io.IOException;
-import java.util.Map;
-
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -18,10 +15,10 @@ public class GraphPageTests extends BaseTest {
 
 	GraphPage graphPage;
 
-	@BeforeMethod
+	@BeforeMethod()
 	public void graphSetupBeforeMethod() throws IOException {
 		login();
-		graphPage = testContext.getGraphPage();
+		graphPage = new GraphPage();
 		graphPage.navigateToPage(ConfigReader.getGraphHomeUrl());
 		LogHelper.info("Navigated to Graph page: " + graphPage.getCurrentUrl());
 	}

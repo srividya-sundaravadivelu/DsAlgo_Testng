@@ -1,16 +1,11 @@
 package pages;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import utils.WebDriverWaitUtility;
 
 public class StackPage extends BasePage {
-	
-	public StackPage(WebDriver driver) {
-		super(driver);
-	}
 	
 	@FindBy(xpath="//a[text()='Operations in Stack']")
 	private WebElement operationsInStackLink;

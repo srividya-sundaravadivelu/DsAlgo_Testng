@@ -15,7 +15,7 @@ public class LandingPageTests extends BaseTest {
 
 	@BeforeMethod	
 	public void landingPageSetupBeforeMethod() {
-		landingPage = testContext.getLandingPage();
+		landingPage = new LandingPage();
 		landingPage.navigateToPage(ConfigReader.getBaseUrl());
 		LogHelper.info("Current page is " + landingPage.getCurrentUrl());
 	}

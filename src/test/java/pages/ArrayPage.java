@@ -1,7 +1,5 @@
 package pages;
 
-import org.openqa.selenium.WebDriver;
-
 import java.io.IOException;
 
 import org.openqa.selenium.By;
@@ -16,10 +14,6 @@ import utils.ExcelReader;
 import utils.WebDriverWaitUtility;
 
 public class ArrayPage extends BasePage {
-
-	public ArrayPage(WebDriver driver) {
-		super(driver);
-	}
 
 	@FindBy(xpath = " //ul//a[@href='arrays-in-python']")
 	WebElement arraysInPythonLink;

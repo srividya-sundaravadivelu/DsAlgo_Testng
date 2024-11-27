@@ -4,15 +4,11 @@ import java.io.IOException;
 import java.util.Map;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
-import data.LoginDataProvider;
 import data.TryEditorDataProvider;
-import pages.HomePage;
-import pages.LoginPage;
 import pages.TryEditorPage;
 import utils.ConfigReader;
 import utils.LogHelper;
@@ -24,7 +20,7 @@ public class TryEditorPageTests extends BaseTest {
 	@BeforeMethod	
 	public void setup() throws IOException {		
 		login();
-		tryEditorPage = testContext.getTryEditorPage();
+		tryEditorPage = new TryEditorPage();
 		tryEditorPage.navigateToPage(ConfigReader.getTryEditorUrl());
 		LogHelper.info("Navigated to Try Editor page: " + tryEditorPage.getCurrentUrl());		
 	}
