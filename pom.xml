@@ -141,13 +141,6 @@
 			<artifactId>commons-io</artifactId>
 			<version>2.16.1</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/picocontainer/picocontainer -->
-		<dependency>
-			<groupId>picocontainer</groupId>
-			<artifactId>picocontainer</artifactId>
-			<version>3</version>
-		</dependency>
-
 	</dependencies>
 
 </project>
