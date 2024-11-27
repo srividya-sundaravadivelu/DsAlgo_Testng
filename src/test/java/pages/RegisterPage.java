@@ -2,170 +2,108 @@ package pages;
 
 import java.util.NoSuchElementException;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
+import utils.LogHelper;
 import utils.WebDriverWaitUtility;
 
 public class RegisterPage extends BasePage {
 
- 	@FindBy(xpath ="//a[@href='/home']")
-	private WebElement getstarted;
-	
-	@FindBy(xpath = "//a[contains(text(),' Register ')]")
-	private WebElement registerlink;
+	@FindBy(xpath = "//a[contains(text(),'Login')]")
+	private WebElement loginLink;
 
-	@FindBy(xpath = "//a[contains(text(),'Sign in')]")
-	private WebElement signinlink;
-
-	// An-11/7
 	@FindBy(xpath = "//*[@id='id_username']")
-	WebElement usernamebox;
+	private WebElement usernameField;
 
 	@FindBy(xpath = "//*[@id='id_password1']")
-	WebElement passwordbox;
+	private WebElement passwordField;
 
 	@FindBy(xpath = "//*[@id='id_password2']")
-	WebElement confirmpwbox;
+	private WebElement confirmPasswordField;
 
 	@FindBy(xpath = "//form/input[@type='submit']")
-	WebElement regbutton;
-	
-	@FindBy(xpath="//*[class='alert alert-primary']")
+	private WebElement registerButton;
+
+	@FindBy(xpath = "//*[class='alert alert-primary']")
 	private WebElement errorMessage;
 
-	public void clickRegister() {
-		WebDriverWaitUtility.waitForElementToBeClickable(registerlink);
-		registerlink.click();
-		
-	}
-	
 	public void clickRegisterButton() {
-		WebDriverWaitUtility.waitForElementToBeClickable(regbutton);
-		regbutton.click();
-		
+		WebDriverWaitUtility.waitForElementToBeClickable(registerButton);
+		registerButton.click();
 	}
-	
-	public void clickGetStartedButton() {
-		WebDriverWaitUtility.waitForElementToBeClickable(getstarted);
-		getstarted.click();
-		
+
+	public void clickLoginLink() {
+		WebDriverWaitUtility.waitForElementToBeClickable(loginLink);
+		loginLink.click();
 	}
-	
-	
-	public Boolean userfieldsempty() {
-	
-	boolean isRequired =false;
-	if(usernamebox.getText().isBlank()) {
-		JavascriptExecutor js_user = (JavascriptExecutor) driver;
-		isRequired =(Boolean) js_user.executeScript("return arguments[0].required;", usernamebox);
+
+	private String errormsgEmptyUser() {
+		return usernameField.getAttribute("validationMessage");
 	}
-	return isRequired;
-		
-}
-	
-	public Boolean pwfieldsempty() {
-		
-	boolean isRequired =false;
-	if(passwordbox.getText().isBlank()) {
-		JavascriptExecutor js_user = (JavascriptExecutor) driver;
-		isRequired =(Boolean) js_user.executeScript("return arguments[0].required;", passwordbox);
+
+	private String errormsgEmptyPassword() {
+		return passwordField.getAttribute("validationMessage");
 	}
-	return isRequired;
+
+	private String errormsgEmptyConfirmPassword() {
+		return confirmPasswordField.getAttribute("validationMessage");
 	}
-	 
-	public Boolean confmpwfieldsempty() {
-		
-	boolean isRequired =false;
-	if(confirmpwbox.getText().isBlank()) {
-		JavascriptExecutor js_user = (JavascriptExecutor) driver;
-		isRequired =(Boolean) js_user.executeScript("return arguments[0].required;", confirmpwbox);
+
+	private void enterUsername(String username) {
+		WebDriverWaitUtility.waitForElementToBeVisible(usernameField);
+		usernameField.clear();
+		usernameField.sendKeys(username);
 	}
-	return isRequired;
+
+	private void enterPassword(String password) {
+		WebDriverWaitUtility.waitForElementToBeVisible(passwordField);
+		passwordField.clear();
+		passwordField.sendKeys(password);
 	}
-	
-	public String errormsgEmptyUser() {
-		return usernamebox.getAttribute("validationMessage");
-		
+
+	private void enterConfirmPassword(String cpassword) {
+		WebDriverWaitUtility.waitForElementToBeVisible(confirmPasswordField);
+		confirmPasswordField.clear();
+		confirmPasswordField.sendKeys(cpassword);
 	}
-	
-	public String errormsgEmptyPw() {
-		return passwordbox.getAttribute("validationMessage");
-		
-	}
-	public String errormsgEmptyConfPw() {
-		return confirmpwbox.getAttribute("validationMessage");
-		
-	}
-	
-	public void enterUsername(String username) {
-		usernamebox.clear();
-		usernamebox.sendKeys(username);
-		
-	}
-	
-	public void enterPassword(String password) {
-		passwordbox.clear();
-		passwordbox.sendKeys(password);
-		
-	}
-	public void enterCofmPassword(String cpassword) {
-		confirmpwbox.clear();
-		confirmpwbox.sendKeys(cpassword);
-		
-	}
-	// Enter username PW and Con PW method for DataTable 
-	
-//	public void validname(DataTable dataTable) {
-//		List<Map<String,String>> userdetail = dataTable.asMaps(String.class,String.class);
-//		for (Map<String,String> form : userdetail) {
-//			
-//			String userName = form.get("username");
-//			LogHelper.info("The user enter username as :"+ userName);
-//			usernamebox.sendKeys(userName);
-//		}
-//	}
-//			
-//		public void validPw(DataTable dataTable) {
-//			List<Map<String,String>> userdetail = dataTable.asMaps(String.class,String.class);
-//			for (Map<String,String> form : userdetail) {
-//				
-//				String password = form.get("password");
-//				LogHelper.info("The user enter username as :"+ password);
-//				usernamebox.sendKeys(password);
-//			}
-//		}
-//			
-//			public void validConfPw(DataTable dataTable) {
-//				List<Map<String,String>> userdetail = dataTable.asMaps(String.class,String.class);
-//				for (Map<String,String> form : userdetail) {
-//					
-//					String cpassword = form.get("Password confirmation");
-//					LogHelper.info("The user enter username as :"+ cpassword);
-//					usernamebox.sendKeys(cpassword);
-//				}
-//	}
-	 
-		
-		// Register title method
-	
-	public String getRegisterTitle() {
-		String title = driver.getTitle();
-		return title;
-		
-		
-	}
-	
-	// Error message method
+
 	public String getErrormsg() {
 		String msg = null;
 		try {
+			WebDriverWaitUtility.waitForElementToBeVisible(errorMessage);
 			msg = errorMessage.getText();
-			
-		} catch(NoSuchElementException e) {
-	}
+
+		} catch (NoSuchElementException e) {
+			LogHelper.error(e.getMessage());
+		}
 		return msg;
-		
 	}
+
+	public String register(String username, String password, String confirmPassword, String validation) {
+
+		String actualOutput = "";
+		enterUsername(username);
+		enterPassword(password);
+		enterConfirmPassword(confirmPassword);
+		clickRegisterButton();
+
+		switch (validation.toLowerCase()) {
+		case "username_empty":
+			actualOutput = errormsgEmptyUser();
+			break;
+		case "password_empty":
+			actualOutput = errormsgEmptyPassword();
+			break;
+		case "confirmpassword_empty":
+			actualOutput = errormsgEmptyConfirmPassword();
+			break;
+		case "username_invalid":
+		case "password_invalid":
+			actualOutput = getErrormsg();
+			break;
+		}
+
+		return actualOutput;
+	}
+
 }
