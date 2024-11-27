@@ -22,7 +22,7 @@ public class ArrayPageTests extends BaseTest {
 	@BeforeMethod
 	public void arraySetupBeforeMethod() throws IOException {
 		login();
-		arrayPage = testContext.getArrayPage();
+		arrayPage = new ArrayPage();
 		arrayPage.navigateToPage(ConfigReader.getArrayUrl());
 		LogHelper.info("Navigated to Array page: " + arrayPage.getCurrentUrl());
 	}
