@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.WebDriver;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -40,6 +41,9 @@ public class ArrayPage extends BasePage {
 	@FindBy(xpath = "//a[@href='/tryEditor']")
 	private WebElement tryEditorLink;
 
+	@FindBy(xpath = "//a[contains(@href,'/question/')]")
+	List<WebElement> questionLinks;
+
 	@FindBy(xpath = "//a[@href='/question/1']")
 	WebElement searchTheArray;
 
@@ -63,7 +67,7 @@ public class ArrayPage extends BasePage {
 
 	@FindBy(id = "output")
 	WebElement output;
-	
+
 	@FindBy(xpath = "//strong//p[contains(@class,'bg-secondary')]")
 	private WebElement pageHeading;
 
@@ -195,6 +199,7 @@ public class ArrayPage extends BasePage {
 		return output.getText();
 
 	}
+
 	public String getPageHeading() {
 		try {
 			WebDriverWaitUtility.waitForElementToBeVisible(pageHeading);
@@ -203,6 +208,22 @@ public class ArrayPage extends BasePage {
 			LogHelper.error("Page heading element is missing. This indicates a missing functionality.");
 			throw new AssertionError("functionality not implemented", e);
 		}
+	}
+
+	public List<WebElement> getAllQuestionLinks() {
+		return questionLinks;
+	}
+
+	public String getQuestionLinkHref(WebElement link) {
+		return link.getAttribute("href");
+	}
+
+	public void clickQuestionlink(WebElement link) {
+		link.click();
+	}
+
+	public void navigateBack() {
+		driver.navigate().back();
 	}
 
 }

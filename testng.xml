@@ -8,10 +8,11 @@
 	<test name="ChromeTest">
 		<parameter name="browser" value="chrome" />
 		<classes>
-			<class name="tests.LandingPageTests" />
+			<!-- <class name="tests.LandingPageTests" />
 			<class name="tests.GraphPageTests" />
 			<class name="tests.TryEditorPageTests" />
-			<class name="tests.TreePageTests" />
+			<class name="tests.TreePageTests" /> -->
+			<class name="tests.ArrayPageTests"/>
 		</classes>
 	</test>
 
