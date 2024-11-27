@@ -33,7 +33,7 @@ public class BaseTest {
 			LogHelper.info("Config Reader browser value: " + ConfigReader.getBrowser());
 		}
 
-		DriverManager.setDriver(browser);
+		DriverManager.setDriver(ConfigReader.getBrowser());
 		LogHelper.info("WebDriver initialized successfully.");
 
 		WebDriverWaitUtility.initializeWait(DriverManager.getDriver(),ConfigReader.getWebDriverWaitTimeout());

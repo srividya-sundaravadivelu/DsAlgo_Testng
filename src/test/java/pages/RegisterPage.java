@@ -24,7 +24,7 @@ public class RegisterPage extends BasePage {
 	@FindBy(xpath = "//form/input[@type='submit']")
 	private WebElement registerButton;
 
-	@FindBy(xpath = "//*[class='alert alert-primary']")
+	@FindBy(xpath = "//div[@class='alert alert-primary']")
 	private WebElement errorMessage;
 
 	public void clickRegisterButton() {
