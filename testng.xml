@@ -11,7 +11,8 @@
 			<class name="tests.LandingPageTests" />
 			<class name="tests.GraphPageTests" />
 			<class name="tests.TryEditorPageTests" />
-			<class name="tests.TreePageTests" />
+			<class name="tests.TreePageTests" /> 
+			<class name="tests.ArrayPageTests"/>
 		</classes>
 	</test>
 
@@ -24,6 +25,7 @@
 			<class name="tests.GraphPageTests" />
 			<class name="tests.TryEditorPageTests" />
 			<class name="tests.TreePageTests" />
+			<class name="tests.ArrayPageTests"/>
 		</classes>
 	</test>
 
@@ -35,6 +37,7 @@
 			<class name="tests.GraphPageTests" />
 			<class name="tests.TryEditorPageTests" />
 			<class name="tests.TreePageTests" />
+			<class name="tests.ArrayPageTests"/>
 		</classes>
 	</test>
 </suite>
