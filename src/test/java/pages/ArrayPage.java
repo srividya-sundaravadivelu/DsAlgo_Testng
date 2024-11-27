@@ -3,16 +3,18 @@ package pages;
 import org.openqa.selenium.WebDriver;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 import utils.ConfigReader;
 import utils.ExcelReader;
+import utils.LogHelper;
 import utils.WebDriverWaitUtility;
 
 public class ArrayPage extends BasePage {
@@ -39,6 +41,9 @@ public class ArrayPage extends BasePage {
 	@FindBy(xpath = "//a[@href='/tryEditor']")
 	private WebElement tryEditorLink;
 
+	@FindBy(xpath = "//a[contains(@href,'/question/')]")
+	List<WebElement> questionLinks;
+
 	@FindBy(xpath = "//a[@href='/question/1']")
 	WebElement searchTheArray;
 
@@ -61,8 +66,10 @@ public class ArrayPage extends BasePage {
 	WebElement codeEditor;
 
 	@FindBy(id = "output")
-
 	WebElement output;
+
+	@FindBy(xpath = "//strong//p[contains(@class,'bg-secondary')]")
+	private WebElement pageHeading;
 
 	public void clickLinkUnderTopicsCovered(String itemName) {
 		WebElement item = driver
@@ -191,6 +198,32 @@ public class ArrayPage extends BasePage {
 		WebDriverWaitUtility.waitForElementToBeVisible(output);
 		return output.getText();
 
+	}
+
+	public String getPageHeading() {
+		try {
+			WebDriverWaitUtility.waitForElementToBeVisible(pageHeading);
+			return pageHeading.getText();
+		} catch (TimeoutException e) {
+			LogHelper.error("Page heading element is missing. This indicates a missing functionality.");
+			throw new AssertionError("functionality not implemented", e);
+		}
+	}
+
+	public List<WebElement> getAllQuestionLinks() {
+		return questionLinks;
+	}
+
+	public String getQuestionLinkHref(WebElement link) {
+		return link.getAttribute("href");
+	}
+
+	public void clickQuestionlink(WebElement link) {
+		link.click();
+	}
+
+	public void navigateBack() {
+		driver.navigate().back();
 	}
 
 }
