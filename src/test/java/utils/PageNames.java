@@ -30,6 +30,14 @@ public final class PageNames {
     public static final String BINARY_SEARCH_TREES_PAGE = "Binary Search Trees";
     public static final String IMPLEMENTATION_OF_BST_PAGE = "Implementation Of BST";
     public static final String TREE_PRACTICE_QUESTIONS_PAGE = "Practice Questions";
-
-
+	
+    //Linked List Page names
+    public static final String INTRODUCTION_PAGE= "Introduction";
+    public static final String CREATING_LINKED_LIST_PAGE= "Creating Linked LIst";
+    public static final String TYPES_OF_LINKED_LIST_PAGE= "Types of Linked List";
+    public static final String IMPLEMENT_LINKED_LIST_IN_PYTHON_PAGE= "Implement Linked List in Python";
+    public static final String TRAVERSAL_PAGE= "Traversal";
+    public static final String INSERTION_PAGE="Insertion";
+    public static final String DELETION_PAGE= "Deletion";
+    public static final String LINKED_LIST_PRACTICE_QUESTIONS_PAGE = "Practice Questions";
 }

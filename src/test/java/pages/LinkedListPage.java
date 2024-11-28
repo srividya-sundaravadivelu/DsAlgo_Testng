@@ -1,32 +1,37 @@
 package pages;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import utils.ConfigReader;
+import utils.LogHelper;
 import utils.WebDriverWaitUtility;
 
 public class LinkedListPage extends BasePage {
 
-	@FindBy(xpath = "//a[@href='introduction']")
+	@FindBy(xpath = "//a[text()='Introduction']")
 	WebElement introductionLink;
 
-	@FindBy(xpath = "//a[@href='creating-linked-list']")
+	@FindBy(xpath = "//a[text()='Creating Linked LIst']")
 	WebElement creatingLinkedlistLink;
 
-	@FindBy(xpath = "//a[@href='types-of-linked-list']")
+	@FindBy(xpath = "//a[text()='Types of Linked List']")
 	WebElement typesOfLinkedlistLLink;
 
-	@FindBy(xpath = "//a[@href='implement-linked-list-in-python']")
+	@FindBy(xpath = "//a[text()='Implement Linked List in Python']")
 	WebElement implementLinkedListInPythonLink;
 
-	@FindBy(xpath = "//a[@href='traversal']")
+	@FindBy(xpath = "//a[text()='Traversal']")
 	WebElement traversalLink;
 
-	@FindBy(xpath = "//a[@href='insertion-in-linked-list']")
+	@FindBy(xpath = "//a[text()='Insertion']")
 	WebElement insertionLink;
 
-	@FindBy(xpath = "//a[@href='deletion-in-linked-list']")
+	@FindBy(xpath = "//a[text()='Deletion']")
 	WebElement deletionLink;
 
 	@FindBy(xpath = "//a[@href='/linked-list/practice']")
@@ -46,6 +51,18 @@ public class LinkedListPage extends BasePage {
 
 	@FindBy(xpath = "//a[contains(@href, 'question')]")
 	WebElement lListPracticeQns;
+
+	@FindBy(xpath = "//strong//p[contains(@class,'bg-secondary')]")
+	private WebElement pageHeading;
+
+	@FindBy(xpath = "//a[@class='list-group-item']")
+	List<WebElement> linkedListTopicLinks;
+
+	public void clickLinkUnderTopicsCovered(String itemName) {
+		WebElement item = driver
+				.findElement(By.xpath("//a[contains(@class,'list-group-item') and text()='" + itemName + "']"));
+		WebDriverWaitUtility.waitForElementToBeClickable(item).click();
+	}
 
 	public void clickIntroductionLink() {
 		WebDriverWaitUtility.waitForElementToBeClickable(introductionLink);
@@ -118,6 +135,29 @@ public class LinkedListPage extends BasePage {
 			flag = false;
 		}
 		return flag;
+	}
+
+	public String getPageHeading() {
+		try {
+			WebDriverWaitUtility.waitForElementToBeVisible(pageHeading);
+			return pageHeading.getText();
+		} catch (TimeoutException e) {
+			LogHelper.error("Page heading element is missing. This indicates a missing functionality.");
+			throw new AssertionError("functionality not implemented", e);
+		}
+	}
+
+	public void clickTryHereButton() {
+
+		tryHereLink.click();
+	}
+
+	public List<WebElement> getLinkedListTopicLinks() {
+		return linkedListTopicLinks;
+	}
+
+	public void navigateBack() {
+		driver.navigate().back();
 	}
 
 }
