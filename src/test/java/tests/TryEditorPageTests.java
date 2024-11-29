@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
@@ -13,6 +14,7 @@ import pages.TryEditorPage;
 import utils.ConfigReader;
 import utils.LogHelper;
 
+@Listeners(listeners.TestListener.class)
 public class TryEditorPageTests extends BaseTest {
 
 	TryEditorPage tryEditorPage;

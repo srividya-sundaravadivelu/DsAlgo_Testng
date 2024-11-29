@@ -12,7 +12,10 @@ public class ExtentReportManager {
 	            ExtentSparkReporter sparkReporter = new ExtentSparkReporter("test-output/SparkReport.html");
 	            sparkReporter.config().setDocumentTitle("DSAlgo Automation Test Report");
 	            sparkReporter.config().setReportName("DSAlgo functional testing");
+	            
 	            extent.setSystemInfo("Environment", "QA");
+	            extent.setSystemInfo("OS", System.getProperty("os.name"));
+	            extent.setSystemInfo("Java Version", System.getProperty("java.version"));
 	            
 	            extent.attachReporter(sparkReporter);
 	        }

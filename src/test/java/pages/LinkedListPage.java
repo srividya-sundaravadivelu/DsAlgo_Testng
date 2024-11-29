@@ -6,8 +6,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-import utils.ConfigReader;
 import utils.LogHelper;
 import utils.WebDriverWaitUtility;
 
@@ -108,35 +106,7 @@ public class LinkedListPage extends BasePage {
 		String title = driver.getTitle();
 		return title;
 	}
-
-	public String getLinkedListPracticeQuestionUrl() {
-		String title = driver.getTitle();
-		return title;
-
-	}
-
-	public void clickTryHereLink(String btnName, String dsName) {
-
-		tryHereLink.click();
-	}
-
-	public void getNavigateToPage(String pageName) {
-		String pageLink = "linkedlist." + pageName.replaceAll("\s", ".") + ".url";
-		String url = ConfigReader.getLink(pageLink.toLowerCase());
-		driver.get(url);
-	}
-
-	public boolean isFindLlistpracticeQnsPresent() {
-		boolean flag = true;
-		try {
-			flag = lListPracticeQns.isDisplayed(); // Returns true if the element is displayed
-		} catch (Exception e) {
-			// If NoSuchElementException is thrown, the element is absent
-			flag = false;
-		}
-		return flag;
-	}
-
+	
 	public String getPageHeading() {
 		try {
 			WebDriverWaitUtility.waitForElementToBeVisible(pageHeading);

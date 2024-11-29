@@ -6,6 +6,7 @@ import java.util.List;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
@@ -13,7 +14,7 @@ import pages.LinkedListPage;
 import utils.ConfigReader;
 import utils.LogHelper;
 import utils.PageNames;
-
+@Listeners(listeners.TestListener.class)
 public class LinkedListPageTests extends BaseTest {
 	LinkedListPage linkedlistPage;
 
