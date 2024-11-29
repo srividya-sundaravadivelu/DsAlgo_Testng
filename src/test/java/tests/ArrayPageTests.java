@@ -123,8 +123,6 @@ public class ArrayPageTests extends BaseTest {
 	public void shouldNavigateToPracticeQuestionsPageFromApplicationsOfArray() {
 		arrayPage.navigateToPage(ConfigReader.getApplicationsOfArrayUrl());
 		arrayPage.clickPracticeQuestionslink();
-		// assertPageUrlAndHeading(ConfigReader.getArrayPracticeQuestionsUrl(),
-		// arrayPage.getArrayPageTitle());
 		Assert.assertEquals(arrayPage.getCurrentUrl(), ConfigReader.getArrayPracticeQuestionsUrl());
 		LogHelper.info("Navigated to Practice Questions: " + arrayPage.getCurrentUrl());
 	}
