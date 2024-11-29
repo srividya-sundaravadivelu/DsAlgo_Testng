@@ -4,6 +4,7 @@
 	<listeners>
 		<listener class-name="io.qameta.allure.testng.AllureTestNg" />
 		<listener class-name="listeners.TestListener" />
+		<listener class-name="listeners.RetryListener" />
 	</listeners>
 	<!-- Test for Chrome -->
 	<test name="ChromeTest">
