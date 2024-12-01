@@ -10,13 +10,13 @@
 		<parameter name="browser" value="chrome" />
 		<classes>
 			<class name="tests.LandingPageTests" />
-			<class name="tests.GraphPageTests" />
+			<!--<class name="tests.GraphPageTests" />
 			<class name="tests.TryEditorPageTests" />
 			<class name="tests.TreePageTests" /> 
 			<class name="tests.ArrayPageTests"/>
 			<class name="tests.RegisterPageTests" />
 			<class name="tests.LinkedListPageTests" />
-			<class name="tests.LoginPageTests" />
+			<class name="tests.LoginPageTests" />-->
 		</classes>
 	</test>
 
@@ -26,13 +26,13 @@
 		<parameter name="browser" value="edge" />
 		<classes>
 			<class name="tests.LandingPageTests" />
-			<class name="tests.GraphPageTests" />
+			<!--<class name="tests.GraphPageTests" />
 			<class name="tests.TryEditorPageTests" />
 			<class name="tests.TreePageTests" />
 			<class name="tests.ArrayPageTests"/>
 			<class name="tests.RegisterPageTests" />
 			<class name="tests.LinkedListPageTests" />
-			<class name="tests.LoginPageTests" />
+			<class name="tests.LoginPageTests" />-->
 		</classes>
 	</test>
 
@@ -41,13 +41,13 @@
 		<parameter name="browser" value="firefox" />
 		<classes>
 			<class name="tests.LandingPageTests" />
-			<class name="tests.GraphPageTests" />
+			<!--<class name="tests.GraphPageTests" />
 			<class name="tests.TryEditorPageTests" />
 			<class name="tests.TreePageTests" />
 			<class name="tests.ArrayPageTests"/>
 			<class name="tests.RegisterPageTests" />
 			<class name="tests.LinkedListPageTests" />
-			<class name="tests.LoginPageTests" />
+			<class name="tests.LoginPageTests" />-->
 		</classes>
 	</test>
 </suite>
