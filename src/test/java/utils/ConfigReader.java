@@ -235,7 +235,7 @@ public class ConfigReader {
 	}
 
 	public static String getImplementLinkedListInPython() {
-		return properties.getProperty("linkedlist.implement.linked.list.in.python");
+		return properties.getProperty("linkedlist.implement.linked.list.in.python.url");
 
 	}
 

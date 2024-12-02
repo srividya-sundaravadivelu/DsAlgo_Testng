@@ -3,6 +3,7 @@ package tests;
 import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
@@ -10,7 +11,7 @@ import pages.GraphPage;
 import utils.ConfigReader;
 import utils.LogHelper;
 import utils.PageNames;
-
+@Listeners(listeners.TestListener.class)
 public class GraphPageTests extends BaseTest {
 
 	GraphPage graphPage;

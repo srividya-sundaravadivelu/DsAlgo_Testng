@@ -3,6 +3,8 @@
 <suite name="CrossBrowserSuite" parallel="classes" thread-count="3">
 	<listeners>
 		<listener class-name="io.qameta.allure.testng.AllureTestNg" />
+		<listener class-name="listeners.TestListener" />
+		<listener class-name="listeners.RetryListener" />
 	</listeners>
 	<!-- Test for Chrome -->
 	<test name="ChromeTest">
@@ -14,6 +16,8 @@
 			<class name="tests.TreePageTests" /> 
 			<class name="tests.ArrayPageTests"/>
 			<class name="tests.RegisterPageTests" />
+			<class name="tests.LinkedListPageTests" />
+			<class name="tests.LoginPageTests" />
 		</classes>
 	</test>
 
@@ -28,6 +32,8 @@
 			<class name="tests.TreePageTests" />
 			<class name="tests.ArrayPageTests"/>
 			<class name="tests.RegisterPageTests" />
+			<class name="tests.LinkedListPageTests" />
+			<class name="tests.LoginPageTests" />
 		</classes>
 	</test>
 
@@ -41,6 +47,8 @@
 			<class name="tests.TreePageTests" />
 			<class name="tests.ArrayPageTests"/>
 			<class name="tests.RegisterPageTests" />
+			<class name="tests.LinkedListPageTests" />
+			<class name="tests.LoginPageTests" />
 		</classes>
 	</test>
 </suite>

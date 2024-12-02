@@ -7,6 +7,7 @@ import java.util.Map;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
@@ -16,6 +17,7 @@ import utils.ConfigReader;
 import utils.LogHelper;
 import utils.PageNames;
 
+@Listeners(listeners.TestListener.class)
 public class ArrayPageTests extends BaseTest {
 	ArrayPage arrayPage;
 
@@ -121,8 +123,6 @@ public class ArrayPageTests extends BaseTest {
 	public void shouldNavigateToPracticeQuestionsPageFromApplicationsOfArray() {
 		arrayPage.navigateToPage(ConfigReader.getApplicationsOfArrayUrl());
 		arrayPage.clickPracticeQuestionslink();
-		// assertPageUrlAndHeading(ConfigReader.getArrayPracticeQuestionsUrl(),
-		// arrayPage.getArrayPageTitle());
 		Assert.assertEquals(arrayPage.getCurrentUrl(), ConfigReader.getArrayPracticeQuestionsUrl());
 		LogHelper.info("Navigated to Practice Questions: " + arrayPage.getCurrentUrl());
 	}

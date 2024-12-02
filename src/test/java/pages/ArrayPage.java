@@ -1,6 +1,5 @@
 package pages;
 
-import java.io.IOException;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -10,8 +9,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
-import utils.ConfigReader;
-import utils.ExcelReader;
 import utils.LogHelper;
 import utils.WebDriverWaitUtility;
 
@@ -130,23 +127,6 @@ public class ArrayPage extends BasePage {
 
 	}
 
-	public String getArrayPageTitle() {
-		String title = driver.getTitle();
-		return title;
-	}
-
-	public void getPracticeQuestionLinksOfArray(String pageName) {
-		String pageLink = "array." + pageName.replaceAll("\s", ".") + ".url";
-		String url = ConfigReader.getLink(pageLink.toLowerCase());
-		driver.get(url);
-	}
-
-	public void enterPythonCode(String sheetName, String questionTitle) throws IOException {
-		ExcelReader excelReader = new ExcelReader(ConfigReader.getExcelFilePath());
-		String code = excelReader.getCellDataByTitle(sheetName, questionTitle, "pythonCode");
-		enterCodeInEditor(code);
-	}
-
 	public void clickRunBtn() {
 		WebDriverWaitUtility.waitForElementToBeClickable(runButton);
 		runButton.click();
@@ -181,17 +161,9 @@ public class ArrayPage extends BasePage {
 		}
 	}
 
-	public String getExpectedResult(String sheetName, String questionTitle) throws IOException {
-		ExcelReader excelReader = new ExcelReader(ConfigReader.getExcelFilePath());
-		String Result = excelReader.getCellDataByTitle(sheetName, questionTitle, "Result");
-		return Result;
-
-	}
-
 	public String getActualResult() {
 		WebDriverWaitUtility.waitForElementToBeVisible(output);
 		return output.getText();
-
 	}
 
 	public String getPageHeading() {

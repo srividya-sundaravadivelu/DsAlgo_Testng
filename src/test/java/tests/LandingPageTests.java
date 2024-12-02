@@ -2,6 +2,7 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
@@ -9,6 +10,7 @@ import pages.LandingPage;
 import utils.ConfigReader;
 import utils.LogHelper;
 
+@Listeners(listeners.TestListener.class)
 public class LandingPageTests extends BaseTest {
 
 	LandingPage landingPage;

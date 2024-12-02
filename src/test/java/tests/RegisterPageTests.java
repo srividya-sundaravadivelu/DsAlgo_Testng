@@ -2,17 +2,17 @@ package tests;
 
 import java.io.IOException;
 import java.util.Map;
-
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import base.BaseTest;
 import data.RegisterDataProvider;
 import pages.RegisterPage;
 import utils.ConfigReader;
 import utils.LogHelper;
 
+@Listeners(listeners.TestListener.class)
 public class RegisterPageTests extends BaseTest {
 	
 	RegisterPage registerPage;
