@@ -31,5 +31,10 @@ public final class PageNames {
     public static final String IMPLEMENTATION_OF_BST_PAGE = "Implementation Of BST";
     public static final String TREE_PRACTICE_QUESTIONS_PAGE = "Practice Questions";
 
+    //Data Structure Introduction Page names
+    public static final String DATA_STRUCTURE_INTRODUCTION_PAGE ="Data Structures-Introduction";
+    public static final String TIME_COMPLEXITY_PAGE = "Time Complexity";    
+    public static final String PRACTICE_QUESTIONS_PAGE = "Practice Questions";
+	
 
 }
