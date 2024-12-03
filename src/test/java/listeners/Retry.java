@@ -5,10 +5,12 @@ import org.apache.logging.log4j.Logger;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 
+import utils.ConfigReader;
+
 public class Retry implements IRetryAnalyzer {
 
 	private static final Logger LOG = LogManager.getLogger("Retry.class");
-	private static final int maxTry = 3;
+	private static final int maxTry = ConfigReader.getRetryCount();
 	private int count = 0;
 
 	public String getResultStatusName(final int status) {

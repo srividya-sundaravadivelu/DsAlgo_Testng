@@ -1,13 +1,16 @@
 package base;
 
 import driver.DriverManager;
+import io.qameta.allure.Allure;
 import pages.HomePage;
 import pages.LoginPage;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Map;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
@@ -15,9 +18,11 @@ import org.testng.annotations.Parameters;
 import data.LoginDataProvider;
 
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import utils.ConfigReader;
 import utils.LogHelper;
+import utils.ScreenshotUtil;
 import utils.WebDriverWaitUtility;
 
 public class BaseTest {
@@ -36,9 +41,9 @@ public class BaseTest {
 		DriverManager.setDriver(ConfigReader.getBrowser());
 		LogHelper.info("WebDriver initialized successfully.");
 
-		WebDriverWaitUtility.initializeWait(DriverManager.getDriver(),ConfigReader.getWebDriverWaitTimeout());
-		
-		LogHelper.info("Thread ID: "+ Thread.currentThread().getId());
+		WebDriverWaitUtility.initializeWait(DriverManager.getDriver(), ConfigReader.getWebDriverWaitTimeout());
+
+		LogHelper.info("Thread ID: " + Thread.currentThread().getId());
 	}
 
 	protected void login() throws IOException {
@@ -60,8 +65,21 @@ public class BaseTest {
 	}
 
 	@AfterMethod(alwaysRun = true,groups={"sanity","regression","functional"})
-    public void tearDownTest() {
-        LogHelper.info("Tearing down WebDriver for thread: " + Thread.currentThread().getId());
-        DriverManager.tearDown(); // Use tearDown to quit and clean up the driver
-    }
+	public void tearDownTest(ITestResult result) {		
+		if (result.getStatus() == ITestResult.FAILURE) {
+			String screenshotPath = ScreenshotUtil.captureScreenshot(DriverManager.getDriver(),
+					result.getMethod().getMethodName());
+			// Attach the screenshot to Allure
+			Path content = Paths.get(screenshotPath);
+			try {
+				Allure.addAttachment("Screenshot on Failure", Files.newInputStream(content));
+			} catch (IOException e) {				
+				e.printStackTrace();
+			}
+		}
+
+		LogHelper.info("Tearing down WebDriver for thread: " + Thread.currentThread().getId());
+		DriverManager.tearDown(); 
+	}
+
 }
