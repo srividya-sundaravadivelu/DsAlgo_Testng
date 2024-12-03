@@ -22,7 +22,7 @@ import utils.WebDriverWaitUtility;
 
 public class BaseTest {
 
-	@BeforeMethod
+	@BeforeMethod(groups={"sanity","regression","functional"})
 	@Parameters("browser")
 	public void setupTest(@Optional String browser) {
 
@@ -59,7 +59,7 @@ public class BaseTest {
 		Assert.assertTrue(homePage.isSignOutLinkVisible(), "Login failed!");
 	}
 
-	@AfterMethod(alwaysRun = true)
+	@AfterMethod(alwaysRun = true,groups={"sanity","regression","functional"})
     public void tearDownTest() {
         LogHelper.info("Tearing down WebDriver for thread: " + Thread.currentThread().getId());
         DriverManager.tearDown(); // Use tearDown to quit and clean up the driver

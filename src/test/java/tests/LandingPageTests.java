@@ -15,21 +15,21 @@ public class LandingPageTests extends BaseTest {
 
 	LandingPage landingPage;
 
-	@BeforeMethod	
+	@BeforeMethod(groups={"sanity","functional"})	
 	public void landingPageSetupBeforeMethod() {
 		landingPage = new LandingPage();
 		landingPage.navigateToPage(ConfigReader.getBaseUrl());
 		LogHelper.info("Current page is " + landingPage.getCurrentUrl());
 	}
 
-	@Test
+	@Test(groups={"sanity","functional"})
 	public void testLandingPageLoadsSuccessfully() {
 		Assert.assertEquals(landingPage.getPageTitle(), "Numpy Ninja");
 		Assert.assertEquals(landingPage.getCurrentUrl(), ConfigReader.getBaseUrl());
 		LogHelper.info("Current page is " + landingPage.getCurrentUrl());
 	}
 
-	@Test
+	@Test(groups={"sanity","functional"})
 	public void testGetStarted() {
 		landingPage.clickGetStartedLink();
 		Assert.assertEquals(landingPage.getCurrentUrl(), ConfigReader.getHomeUrl());

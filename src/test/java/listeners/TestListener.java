@@ -25,6 +25,12 @@ public class TestListener implements ITestListener {
 	          // Create an ExtentTest object and attach the browser info
 	          ExtentTest test = ExtentReportManager.getExtentReports().createTest(result.getMethod().getMethodName());
 	          test.info("Running test on browser: " + browser);
+	          
+	          // Attach group names to the test
+	          String[] groups = result.getMethod().getGroups();
+	          if (groups.length > 0) {
+	              test.assignCategory(groups);  // Use assignCategory to display groups
+	          }
 	          extentTest.set(test);
 	       
 	    }

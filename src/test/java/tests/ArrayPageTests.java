@@ -21,7 +21,7 @@ import utils.PageNames;
 public class ArrayPageTests extends BaseTest {
 	ArrayPage arrayPage;
 
-	@BeforeMethod
+	@BeforeMethod(groups={"functional"})
 	public void arraySetupBeforeMethod() throws IOException {
 		login();
 		arrayPage = new ArrayPage();
@@ -29,44 +29,44 @@ public class ArrayPageTests extends BaseTest {
 		LogHelper.info("Navigated to Array page: " + arrayPage.getCurrentUrl());
 	}
 
-	@Test(priority = 1)
+	@Test(groups={"functional"})
 	public void shouldLoadArrayPageSuccessfully() {
 		Assert.assertEquals(arrayPage.getCurrentUrl(), ConfigReader.getArrayUrl());
 		LogHelper.info("Current page is " + arrayPage.getCurrentUrl());
 	}
 
-	@Test
+	@Test(groups={"functional"})
 	public void shouldNavigateToArraysInPythonPageFromTopicsCovered() {
 		arrayPage.clickLinkUnderTopicsCovered("Arrays in Python");
 		assertPageUrlAndHeading(ConfigReader.getArraysInPythonUrl(), PageNames.ARRAYS_IN_PYTHON_PAGE);
 	}
 
-	@Test
+	@Test(groups={"functional"})
 	public void shouldNavigateToArraysUsingListPageFromTopicsCovered() {
 		arrayPage.clickLinkUnderTopicsCovered("Arrays Using List");
 		assertPageUrlAndHeading(ConfigReader.getArraysUsingListUrl(), PageNames.ARRAYS_USING_LIST_PAGE);
 	}
 
-	@Test
+	@Test(groups={"functional"})
 	public void shouldNavigateToBasicOperationsInListsPageFromTopicsCovered() {
 		arrayPage.clickLinkUnderTopicsCovered("Basic Operations in Lists");
 		assertPageUrlAndHeading(ConfigReader.getBasicOperationsInListsUrl(), PageNames.BASIC_OPERATIONS_IN_LISTS);
 	}
 
-	@Test
+	@Test(groups={"functional"})
 	public void shouldNavigateToApplicationsOfArrayPageFromTopicsCovered() {
 		arrayPage.clickLinkUnderTopicsCovered("Applications of Array");
 		assertPageUrlAndHeading(ConfigReader.getApplicationsOfArrayUrl(), PageNames.APPLICATIONS_OF_ARRAY);
 	}
 
-	@Test
+	@Test(groups={"functional"})
 	public void shouldNavigateToArraysInPythonPageFromArray() {
 		arrayPage.navigateToPage(ConfigReader.getArrayUrl());
 		arrayPage.clickArraysInPythonlink();
 		assertPageUrlAndHeading(ConfigReader.getArraysInPythonUrl(), PageNames.ARRAYS_IN_PYTHON_PAGE);
 	}
 
-	@Test
+	@Test(groups={"functional"})
 	public void shouldNavigateToTryEditorFromArraysInPythonPage() {
 		arrayPage.navigateToPage(ConfigReader.getArraysInPythonUrl());
 		arrayPage.clickTryHereButton();
@@ -74,14 +74,14 @@ public class ArrayPageTests extends BaseTest {
 		LogHelper.info("Navigated to Try Editor: " + arrayPage.getCurrentUrl());
 	}
 
-	@Test
+	@Test(groups={"functional"})
 	public void shouldNavigateToArraysUsingListPageFromArraysInPython() {
 		arrayPage.navigateToPage(ConfigReader.getArraysInPythonUrl());
 		arrayPage.clickArraysUsingList();
 		assertPageUrlAndHeading(ConfigReader.getArraysUsingListUrl(), PageNames.ARRAYS_USING_LIST_PAGE);
 	}
 
-	@Test
+	@Test(groups={"functional"})
 	public void shouldNavigateToTryEditorFromArraysUsingListPage() {
 		arrayPage.navigateToPage(ConfigReader.getArraysUsingListUrl());
 		arrayPage.clickTryHereButton();
@@ -89,14 +89,14 @@ public class ArrayPageTests extends BaseTest {
 		LogHelper.info("Navigated to Try Editor: " + arrayPage.getCurrentUrl());
 	}
 
-	@Test
+	@Test(groups={"functional"})
 	public void shouldNavigateToBasicOperationsInListsFromArraysUsingList() {
 		arrayPage.navigateToPage(ConfigReader.getArraysUsingListUrl());
 		arrayPage.clickBasicOperationsInLists();
 		assertPageUrlAndHeading(ConfigReader.getBasicOperationsInListsUrl(), PageNames.BASIC_OPERATIONS_IN_LISTS);
 	}
 
-	@Test
+	@Test(groups={"functional"})
 	public void shouldNavigateToTryEditorFromBasicOperationsInLists() {
 		arrayPage.navigateToPage(ConfigReader.getBasicOperationsInListsUrl());
 		arrayPage.clickTryHereButton();
@@ -104,14 +104,14 @@ public class ArrayPageTests extends BaseTest {
 		LogHelper.info("Navigated to Try Editor: " + arrayPage.getCurrentUrl());
 	}
 
-	@Test
+	@Test(groups={"functional"})
 	public void shouldNavigateToApplicationsOfArrayFromBasicOperationsInLists() {
 		arrayPage.navigateToPage(ConfigReader.getBasicOperationsInListsUrl());
 		arrayPage.clickApplicationsOfArray();
 		assertPageUrlAndHeading(ConfigReader.getApplicationsOfArrayUrl(), PageNames.APPLICATIONS_OF_ARRAY);
 	}
 
-	@Test
+	@Test(groups={"functional"})
 	public void shouldNavigateToTryEditorFromApplicationsOfArray() {
 		arrayPage.navigateToPage(ConfigReader.getApplicationsOfArrayUrl());
 		arrayPage.clickTryHereButton();
@@ -119,7 +119,7 @@ public class ArrayPageTests extends BaseTest {
 		LogHelper.info("Navigated to Try Editor: " + arrayPage.getCurrentUrl());
 	}
 
-	@Test
+	@Test(groups={"functional"})
 	public void shouldNavigateToPracticeQuestionsPageFromApplicationsOfArray() {
 		arrayPage.navigateToPage(ConfigReader.getApplicationsOfArrayUrl());
 		arrayPage.clickPracticeQuestionslink();
@@ -127,7 +127,7 @@ public class ArrayPageTests extends BaseTest {
 		LogHelper.info("Navigated to Practice Questions: " + arrayPage.getCurrentUrl());
 	}
 
-	@Test
+	@Test(groups={"functional"},dependsOnMethods = "shouldNavigateToPracticeQuestionsPageFromApplicationsOfArray")
 	public void shouldNavigateToPracticeQuestionsFromQuestionsPage() {
 		arrayPage.navigateToPage(ConfigReader.getArrayPracticeQuestionsUrl());
 		// Get all question links from the page
@@ -154,7 +154,8 @@ public class ArrayPageTests extends BaseTest {
 
 	}
 
-	@Test(dataProvider = "validPythonCodeForRunDataProvider", dataProviderClass = ArrayQuestionsDataProvider.class)
+	@Test(dataProvider = "validPythonCodeForRunDataProvider", dataProviderClass = ArrayQuestionsDataProvider.class,groups={"functional"}
+	, dependsOnMethods = "shouldNavigateToPracticeQuestionsFromQuestionsPage")		
 	public void shouldRunValidPythonCode(Map<String, String> rowData) throws IOException {
 		arrayPage.navigateToPage(ConfigReader.getArrayPracticeQuestionsUrl());
 		String questionTitle = rowData.get("questionTitle");
@@ -171,7 +172,7 @@ public class ArrayPageTests extends BaseTest {
 		Assert.assertEquals(actualResult, expectedResult);
 	}
 
-	@Test(dataProvider = "validPythonCodeForSubmitDataProvider", dataProviderClass = ArrayQuestionsDataProvider.class)
+	@Test(dataProvider = "validPythonCodeForSubmitDataProvider", dataProviderClass = ArrayQuestionsDataProvider.class,groups={"functional"})
 	public void shouldSubmitValidPythonCode(Map<String, String> rowData) throws IOException {
 		arrayPage.navigateToPage(ConfigReader.getArrayPracticeQuestionsUrl());
 		String questionTitle = rowData.get("questionTitle");
@@ -188,7 +189,7 @@ public class ArrayPageTests extends BaseTest {
 		Assert.assertEquals(actualResult, expectedResult);
 	}
 
-	@Test(dataProvider = "invalidPythonCodeForRunDataProvider", dataProviderClass = ArrayQuestionsDataProvider.class)
+	@Test(dataProvider = "invalidPythonCodeForRunDataProvider", dataProviderClass = ArrayQuestionsDataProvider.class,groups={"functional"})
 	public void shouldVerifyInvalidPythonCode(Map<String, String> rowData) throws IOException {
 
 		arrayPage.navigateToPage(ConfigReader.getArrayPracticeQuestionsUrl());
