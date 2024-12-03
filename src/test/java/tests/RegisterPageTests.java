@@ -17,14 +17,14 @@ public class RegisterPageTests extends BaseTest {
 	
 	RegisterPage registerPage;
 	
-	@BeforeMethod()
+	@BeforeMethod(groups={"sanity","functional"})
 	public void registerSetupBeforeMethod() throws IOException {
 		registerPage = new RegisterPage();
 		registerPage.navigateToPage(ConfigReader.getRegisterUrl());
 		LogHelper.info("Navigated to Register page: " + registerPage.getCurrentUrl());
 	}
 	
-	@Test(dataProvider = "invalidRegistrationDataProvider", dataProviderClass = RegisterDataProvider.class)
+	@Test(dataProvider = "invalidRegistrationDataProvider", dataProviderClass = RegisterDataProvider.class,groups={"functional"})
 	public void shouldValidateInvalidRegistrationData(Map<String, String> rowData) throws IOException {	
 		String username = rowData.get("username");
 		String password = rowData.get("password");
@@ -36,7 +36,7 @@ public class RegisterPageTests extends BaseTest {
 		Assert.assertEquals(actualOutput, expectedMessage);
 	}
 	
-	@Test
+	@Test(groups={"sanity","functional"})
 	public void shouldNavigateToLoginPage() {
 		registerPage.clickLoginLink();
 		Assert.assertEquals(registerPage.getCurrentUrl(), ConfigReader.getLoginUrl());

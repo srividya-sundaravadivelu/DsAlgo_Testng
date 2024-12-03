@@ -24,39 +24,39 @@ public class GraphPageTests extends BaseTest {
 		LogHelper.info("Navigated to Graph page: " + graphPage.getCurrentUrl());
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 1,groups={"functional"})
 	public void shouldLoadGraphHomePageSuccessfully() {
 		Assert.assertEquals(graphPage.getCurrentUrl(), ConfigReader.getGraphHomeUrl());
 		LogHelper.info("Current page is " + graphPage.getCurrentUrl());
 	}
 
-	@Test
+	@Test(groups={"functional"})
 	public void shouldNavigateToGraphPageFromTopicsCovered() {
 		graphPage.clickLinkUnderTopicsCovered(PageNames.GRAPH_PAGE);
 		assertPageUrlAndHeading(ConfigReader.getGraphUrl(), PageNames.GRAPH_PAGE);
 	}
 
-	@Test
+	@Test(groups={"functional"})
 	public void shouldNavigateToGraphRepresentationsPageFromTopicsCovered() {
 		graphPage.clickLinkUnderTopicsCovered(PageNames.GRAPH_REPRESENTATIONS_PAGE);
 		assertPageUrlAndHeading(ConfigReader.getGraphRepresentationsUrl(), PageNames.GRAPH_REPRESENTATIONS_PAGE);
 	}
 
-	@Test
+	@Test(groups={"functional"})
 	public void shouldNavigateToGraphRepresentationsPageFromGraph() {
 		graphPage.navigateToPage(ConfigReader.getGraphUrl());
 		graphPage.clickGraphRepresentationsLink();
 		assertPageUrlAndHeading(ConfigReader.getGraphRepresentationsUrl(), PageNames.GRAPH_REPRESENTATIONS_PAGE);
 	}
 
-	@Test
+	@Test(groups={"functional"})
 	public void shouldNavigateToPracticeQuestionsPageFromGraphRepresentations() {
 		graphPage.navigateToPage(ConfigReader.getGraphRepresentationsUrl());
 		graphPage.clickPracticeLink();
 		assertPageUrlAndHeading(ConfigReader.getGraphPracticeUrl(), PageNames.GRAPH_PRACTICE_QUESTIONS_PAGE);
 	}
 
-	@Test
+	@Test(groups={"functional"})
 	public void shouldNavigateToTryEditorFromGraph() {
 		graphPage.navigateToPage(ConfigReader.getGraphUrl());
 		graphPage.clickTryHereButton();
@@ -64,7 +64,7 @@ public class GraphPageTests extends BaseTest {
 		LogHelper.info("Navigated to Try Editor: " + graphPage.getCurrentUrl());
 	}
 
-	@Test
+	@Test(groups={"functional"})
 	public void shouldNavigateToTryEditorFromGraphRepresentations() {
 		graphPage.navigateToPage(ConfigReader.getGraphRepresentationsUrl());
 		graphPage.clickTryHereButton();
