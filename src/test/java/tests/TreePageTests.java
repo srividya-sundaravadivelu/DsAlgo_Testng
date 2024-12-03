@@ -17,8 +17,8 @@ public class TreePageTests extends BaseTest {
 
 	TreePage treePage;
 
-	@BeforeMethod
-	public void treeSetupBeforeMethod() throws IOException {		
+	@BeforeMethod(alwaysRun = true)
+	void treeSetupBeforeMethod() throws IOException {		
 		login();
 		treePage = new TreePage();
 		treePage.navigateToPage(ConfigReader.getTreeUrl());
