@@ -64,7 +64,7 @@ public class BaseTest {
 		Assert.assertTrue(homePage.isSignOutLinkVisible(), "Login failed!");
 	}
 
-	@AfterMethod(alwaysRun = true,groups={"sanity","regression","functional"})
+	@AfterMethod(alwaysRun = true)
 	public void tearDownTest(ITestResult result) {		
 		if (result.getStatus() == ITestResult.FAILURE) {
 			String screenshotPath = ScreenshotUtil.captureScreenshot(DriverManager.getDriver(),
