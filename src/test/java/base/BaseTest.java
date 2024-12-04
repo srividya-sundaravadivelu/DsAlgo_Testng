@@ -27,7 +27,7 @@ import utils.WebDriverWaitUtility;
 
 public class BaseTest {
 
-	@BeforeMethod(groups={"sanity","regression","functional"})
+	@BeforeMethod(alwaysRun = true)
 	@Parameters("browser")
 	public void setupTest(@Optional String browser) {
 

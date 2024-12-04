@@ -21,7 +21,7 @@ import utils.PageNames;
 public class ArrayPageTests extends BaseTest {
 	ArrayPage arrayPage;
 
-	@BeforeMethod(groups={"functional"})
+	@BeforeMethod(alwaysRun = true)
 	public void arraySetupBeforeMethod() throws IOException {
 		login();
 		arrayPage = new ArrayPage();

@@ -17,7 +17,7 @@ import utils.LogHelper;
 public class LoginPageTests extends BaseTest {
 	LoginPage loginPage;
 	
-	@BeforeMethod(groups={"sanity","functional"})
+	@BeforeMethod(alwaysRun = true)
 	public void registerSetupBeforeMethod() throws IOException {
 		loginPage = new LoginPage();
 		loginPage.navigateToPage(ConfigReader.getLoginUrl());
