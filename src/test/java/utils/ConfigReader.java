@@ -287,5 +287,9 @@ public class ConfigReader {
 		return Boolean.parseBoolean(properties.getProperty("browser.edge.headless", "false"));
 	}
 	
+	public static int getRetryCount() {
+		return Integer.parseInt(properties.getProperty("retry.count"));
+	}
+	
 	
 }

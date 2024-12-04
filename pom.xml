@@ -5,7 +5,10 @@
 	<groupId>DsAlgo-Testng</groupId>
 	<artifactId>DsAlgo-Testng</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-
+	<properties>
+		<!-- Default fallback value for suiteXmlFile -->
+		<suiteXmlFile>testng_functional.xml</suiteXmlFile>
+	</properties>
 	<build>
 		<plugins>
 			<plugin>
@@ -33,7 +36,7 @@
 						<threadcount>3</threadcount>
 					</properties>-->
 					<suiteXmlFiles>
-						<suiteXmlFile>testng.xml</suiteXmlFile>
+						<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
@@ -45,7 +48,13 @@
 				<configuration>
 					<filesets>
 						<fileset>
+							<directory>test-output</directory>
+						</fileset>
+						<fileset>
 							<directory>allure-results</directory>
+						</fileset>
+						<fileset>
+							<directory>target/Surefire-reports</directory>
 						</fileset>
 					</filesets>
 				</configuration>
@@ -93,13 +102,6 @@
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
 			<version>5.0.9</version>
-		</dependency>
-		<!--
-		https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter -->
-		<dependency>
-			<groupId>tech.grasshopper</groupId>
-			<artifactId>extentreports-cucumber7-adapter</artifactId>
-			<version>1.10.1</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
 		<dependency>

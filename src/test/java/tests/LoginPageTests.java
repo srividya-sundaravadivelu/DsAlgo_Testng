@@ -17,14 +17,14 @@ import utils.LogHelper;
 public class LoginPageTests extends BaseTest {
 	LoginPage loginPage;
 	
-	@BeforeMethod()
+	@BeforeMethod(alwaysRun = true)
 	public void registerSetupBeforeMethod() throws IOException {
 		loginPage = new LoginPage();
 		loginPage.navigateToPage(ConfigReader.getLoginUrl());
 		LogHelper.info("Navigated to Register page: " + loginPage.getCurrentUrl());
 	}
 
-	@Test(dataProvider = "validLoginDataProvider", dataProviderClass = LoginDataProvider.class)
+	@Test(dataProvider = "validLoginDataProvider", dataProviderClass = LoginDataProvider.class,groups={"sanity","functional"})
 	public void shouldValidateValidLoginData(Map<String, String> rowData) throws IOException {		
 		LogHelper.info("Starting shouldValidateValidLoginData Test Iteration");
 		String username = rowData.get("username");
@@ -38,7 +38,7 @@ public class LoginPageTests extends BaseTest {
 		LogHelper.info("Test Iteration Completed");
 	}
 
-	@Test(dataProvider = "invalidLoginDataProvider", dataProviderClass = LoginDataProvider.class)
+	@Test(dataProvider = "invalidLoginDataProvider", dataProviderClass = LoginDataProvider.class,groups={"functional"})
 	public void shouldValidateInvalidLoginData(Map<String, String> rowData) throws IOException {			
 		LogHelper.info("Starting shouldValidateInvalidLoginData Test Iteration");		
 		String username = rowData.get("username");
@@ -53,7 +53,7 @@ public class LoginPageTests extends BaseTest {
 		LogHelper.info("Test Iteration Completed");
 	}
 
-	@Test
+	@Test(groups={"functional"})
 	public void shouldValidateRegisterBtn() {
 		loginPage.navigateToPage(ConfigReader.getLoginUrl());
 		loginPage.clickRegisterlink();

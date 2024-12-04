@@ -18,7 +18,7 @@ public class DriverManager {
 
 	public static void setDriver(String browser) {
 		WebDriver driver;
-		LogHelper.info("Browser value inside SetDriver method in TestContext:" + browser);
+		LogHelper.info("Browser value inside SetDriver method in DriverManager:" + browser);
 		long pageLoadTimeout = Long.parseLong(ConfigReader.getPageLoadTimeout());
 
 		switch (browser.toLowerCase()) {

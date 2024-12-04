@@ -19,7 +19,7 @@ public class TryEditorPageTests extends BaseTest {
 
 	TryEditorPage tryEditorPage;
 	
-	@BeforeMethod	
+	@BeforeMethod(alwaysRun = true)	
 	public void setup() throws IOException {		
 		login();
 		tryEditorPage = new TryEditorPage();
@@ -27,7 +27,7 @@ public class TryEditorPageTests extends BaseTest {
 		LogHelper.info("Navigated to Try Editor page: " + tryEditorPage.getCurrentUrl());		
 	}
 
-	@Test(dataProvider = "validTryEditorDataProvider", dataProviderClass = TryEditorDataProvider.class)
+	@Test(dataProvider = "validTryEditorDataProvider", dataProviderClass = TryEditorDataProvider.class,groups={"functional"})
 	public void shouldRunValidPythonCode(Map<String, String> rowData) throws IOException {
 		String pythonCode = rowData.get("pythonCode");
 		String expectedOutput = rowData.get("Result");
@@ -39,7 +39,7 @@ public class TryEditorPageTests extends BaseTest {
 		Assert.assertEquals(actualOutput, expectedOutput);
 	}
 	
-	@Test(dataProvider = "invalidTryEditorDataProvider", dataProviderClass = TryEditorDataProvider.class)
+	@Test(dataProvider = "invalidTryEditorDataProvider", dataProviderClass = TryEditorDataProvider.class,groups={"functional"})
 	public void shouldRunInvalidPythonCode(Map<String, String> rowData) throws IOException {	
 		String pythonCode = rowData.get("pythonCode");
 		String expectedOutput = rowData.get("Result");
