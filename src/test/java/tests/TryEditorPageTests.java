@@ -19,7 +19,7 @@ public class TryEditorPageTests extends BaseTest {
 
 	TryEditorPage tryEditorPage;
 	
-	@BeforeMethod	
+	@BeforeMethod(alwaysRun =true)	
 	public void setup() throws IOException {		
 		login();
 		tryEditorPage = new TryEditorPage();

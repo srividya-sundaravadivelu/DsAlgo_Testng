@@ -17,7 +17,7 @@ public class RegisterPageTests extends BaseTest {
 	
 	RegisterPage registerPage;
 	
-	@BeforeMethod(groups={"sanity","functional"})
+	@BeforeMethod(alwaysRun = true)
 	public void registerSetupBeforeMethod() throws IOException {
 		registerPage = new RegisterPage();
 		registerPage.navigateToPage(ConfigReader.getRegisterUrl());

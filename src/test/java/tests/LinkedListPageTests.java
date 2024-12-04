@@ -18,7 +18,7 @@ import utils.PageNames;
 public class LinkedListPageTests extends BaseTest {
 	LinkedListPage linkedlistPage;
 
-	@BeforeMethod(groups={"sanity","functional"})
+	@BeforeMethod(alwaysRun = true)
 	public void LinkedListSetupBeforeMethod() throws IOException {
 		login();
 		linkedlistPage = new LinkedListPage();

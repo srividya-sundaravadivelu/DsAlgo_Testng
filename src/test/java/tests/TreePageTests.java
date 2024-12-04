@@ -17,7 +17,7 @@ public class TreePageTests extends BaseTest {
 
 	TreePage treePage;
 
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	public void treeSetupBeforeMethod() throws IOException {		
 		login();
 		treePage = new TreePage();

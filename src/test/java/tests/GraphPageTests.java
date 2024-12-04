@@ -16,7 +16,7 @@ public class GraphPageTests extends BaseTest {
 
 	GraphPage graphPage;
 
-	@BeforeMethod()
+	@BeforeMethod(alwaysRun = true)
 	public void graphSetupBeforeMethod() throws IOException {
 		login();
 		graphPage = new GraphPage();

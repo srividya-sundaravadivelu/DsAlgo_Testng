@@ -15,7 +15,7 @@ public class LandingPageTests extends BaseTest {
 
 	LandingPage landingPage;
 
-	@BeforeMethod(groups={"sanity","functional"})	
+	@BeforeMethod(alwaysRun = true)	
 	public void landingPageSetupBeforeMethod() {
 		landingPage = new LandingPage();
 		landingPage.navigateToPage(ConfigReader.getBaseUrl());

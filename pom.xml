@@ -7,7 +7,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
 		<!-- Default fallback value for suiteXmlFile -->
-		<suiteXmlFile>testng.xml</suiteXmlFile>
+		<suiteXmlFile>testng_functional.xml</suiteXmlFile>
 	</properties>
 	<build>
 		<plugins>
@@ -48,7 +48,13 @@
 				<configuration>
 					<filesets>
 						<fileset>
+							<directory>test-output</directory>
+						</fileset>
+						<fileset>
 							<directory>allure-results</directory>
+						</fileset>
+						<fileset>
+							<directory>target/Surefire-reports</directory>
 						</fileset>
 					</filesets>
 				</configuration>
