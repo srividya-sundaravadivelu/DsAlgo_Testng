@@ -5,24 +5,19 @@ import org.testng.annotations.DataProvider;
 
 public class TryEditorDataProvider {
 
-    private static final String TRY_EDITOR_SHEET = "pythonCode";
+    private static final String VALID_TRY_EDITOR_SHEET = "validTryEditor";
+    private static final String INVALID_TRY_EDITOR_SHEET = "invalidTryEditor";
     
     @DataProvider(name = "validTryEditorDataProvider")
     public static Object[][] validTryEditorDataProvider() throws IOException {
-        Object[][] data = DsAlgoDataProvider.loadDataFromExcelForDataProvider(TRY_EDITOR_SHEET);
-        // Return only the first row for valid try editor data
-        return new Object[][] { data[0] };
+        Object[][] data = DsAlgoDataProvider.loadDataFromExcelForDataProvider(VALID_TRY_EDITOR_SHEET);
+        return data;
     }
 
     @DataProvider(name = "invalidTryEditorDataProvider")
     public static Object[][] invalidTryEditorDataProvider() throws IOException {
-        Object[][] data = DsAlgoDataProvider.loadDataFromExcelForDataProvider(TRY_EDITOR_SHEET);
-
-        // Exclude the first row and return the rest for invalid data
-        Object[][] invalidData = new Object[data.length - 1][1];
-        for (int i = 1; i < data.length; i++) {
-            invalidData[i - 1] = data[i];
-        }
-        return invalidData;
+        Object[][] data = DsAlgoDataProvider.loadDataFromExcelForDataProvider(INVALID_TRY_EDITOR_SHEET);
+        return data;
+        
     }
 }

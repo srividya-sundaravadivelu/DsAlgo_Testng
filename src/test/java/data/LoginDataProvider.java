@@ -5,24 +5,18 @@ import org.testng.annotations.DataProvider;
 
 public class LoginDataProvider {
 
-    private static final String LOGIN_SHEET = "loginSheet";
+    private static final String VALID_LOGIN_SHEET = "validLoginSheet";
+    private static final String INVALID_LOGIN_SHEET = "invalidLoginSheet";
 
     @DataProvider(name = "validLoginDataProvider")
     public static Object[][] validLoginDataProvider() throws IOException {
-        Object[][] data = DsAlgoDataProvider.loadDataFromExcelForDataProvider(LOGIN_SHEET);
-        // Return only the first row for valid login data
-        return new Object[][] { data[0] };
+        Object[][] data = DsAlgoDataProvider.loadDataFromExcelForDataProvider(VALID_LOGIN_SHEET);
+        return data;
     }
     
     @DataProvider(name = "invalidLoginDataProvider")
     public static Object[][] invalidLoginDataProvider() throws IOException {
-        Object[][] data = DsAlgoDataProvider.loadDataFromExcelForDataProvider(LOGIN_SHEET);
-
-        // Exclude the first row and return the rest for invalid login data
-        Object[][] invalidData = new Object[data.length - 1][1];
-        for (int i = 1; i < data.length; i++) {
-            invalidData[i - 1] = data[i];
-        }
-        return invalidData;
+        Object[][] data = DsAlgoDataProvider.loadDataFromExcelForDataProvider(INVALID_LOGIN_SHEET);
+        return data;       
     }
 }
