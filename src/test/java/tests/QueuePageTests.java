@@ -82,11 +82,42 @@ public class QueuePageTests extends BaseTest{
 		assertPageUrlAndHeading(ConfigReader.getQueuePracticeUrl(), PageNames.QUEUE_PRACTICE_QUESTIONS);
 	}
 	
+	@Test(groups={"functional"})
+	public void shouldNavigateToTryEditorFromImplementationOfQueueInPython() {
+		queuePage.navigateToPage(ConfigReader.getImplementationofQueueinPython());
+		queuePage.clickTryHereButton();
+		Assert.assertEquals(queuePage.getCurrentUrl(), ConfigReader.getTryEditorUrl());
+		LogHelper.info("Navigated to Try Editor: " + queuePage.getCurrentUrl());
+	}
+	
+	@Test(groups={"functional"})
+	public void shouldNavigateToTryEditorFromImplementationUsingCollectionsDeque() {
+		queuePage.navigateToPage(ConfigReader.getImplementationUsingCollectionsDeque());
+		queuePage.clickTryHereButton();
+		Assert.assertEquals(queuePage.getCurrentUrl(), ConfigReader.getTryEditorUrl());
+		LogHelper.info("Navigated to Try Editor: " + queuePage.getCurrentUrl());
+	}
+	
+	@Test(groups={"functional"})
+	public void shouldNavigateToTryEditorFromImplementationUsingArray() {
+		queuePage.navigateToPage(ConfigReader.getImplementationUsingArrayinQueue());
+		queuePage.clickTryHereButton();
+		Assert.assertEquals(queuePage.getCurrentUrl(), ConfigReader.getTryEditorUrl());
+		LogHelper.info("Navigated to Try Editor: " + queuePage.getCurrentUrl());
+	}
+	
+	@Test(groups={"functional"})
+	public void shouldNavigateToTryEditorFromQueueOperations() {
+		queuePage.navigateToPage(ConfigReader.getQueueOperations());
+		queuePage.clickTryHereButton();
+		Assert.assertEquals(queuePage.getCurrentUrl(), ConfigReader.getTryEditorUrl());
+		LogHelper.info("Navigated to Try Editor: " + queuePage.getCurrentUrl());
+	}
+	
 	private void assertPageUrlAndHeading(String expectedUrl, String expectedHeading) {
 		Assert.assertEquals(queuePage.getCurrentUrl(), expectedUrl);
 		Assert.assertEquals(queuePage.getPageHeading(), expectedHeading);
 		LogHelper.info("Current page is: " + queuePage.getCurrentUrl());
 	}
-	
 
 }
