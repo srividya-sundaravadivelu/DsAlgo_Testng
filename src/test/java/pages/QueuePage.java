@@ -1,8 +1,10 @@
 package pages;
 
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import utils.LogHelper;
 import utils.WebDriverWaitUtility;
 
 public class QueuePage extends BasePage {
@@ -24,6 +26,9 @@ public class QueuePage extends BasePage {
 
 	@FindBy(xpath = "//a[text()='Practice Questions']")
 	private WebElement practiceLink;
+	
+	@FindBy(xpath = "//strong//p[contains(@class,'bg-secondary')]")
+	private WebElement pageHeading;
 
 	public void clickImplementationofQueueinPythonLink() {
 		WebDriverWaitUtility.waitForElementToBeClickable(implementationofQueueinPythonLink);
@@ -53,5 +58,15 @@ public class QueuePage extends BasePage {
 	public void clickPracticeQuesLink() {
 		WebDriverWaitUtility.waitForElementToBeClickable(practiceLink);
 		practiceLink.click();
+	}
+	
+	public String getPageHeading() {
+		try {
+			WebDriverWaitUtility.waitForElementToBeVisible(pageHeading);
+			return pageHeading.getText();
+		} catch (TimeoutException e) {
+			LogHelper.error("Page heading element is missing. This indicates a missing functionality.");
+			throw new AssertionError("functionality not implemented", e);
+		}
 	}
 }

@@ -61,5 +61,10 @@ public final class PageNames {
     //Queue Page names
     
     public static final String QUEE_PAGE ="Queue";
+    public static final String IMPLEMENTATION_OF_QUEUE_IN_PYTHON = "Implementation of Queue in Python";
+    public static final String IMPLEMENTAION_USING_COLLECTIONS_DEQUEUE = "Implementation using collections.deque";
+    public static final String QUEUE_IMPLEMENTATION_USING_ARRAY = "Implementation using array";
+    public static final String QUEUE_OPERATIONS = "Queue Operations";
+    public static final String QUEUE_PRACTICE_QUESTIONS = "Practice Questions";
     
 }
