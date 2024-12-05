@@ -12,7 +12,7 @@ import pages.RegisterPage;
 import utils.ConfigReader;
 import utils.LogHelper;
 
-@Listeners(listeners.TestListener.class)
+
 public class RegisterPageTests extends BaseTest {
 	
 	RegisterPage registerPage;

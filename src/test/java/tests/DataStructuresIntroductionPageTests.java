@@ -15,33 +15,33 @@ import utils.PageNames;
 public class DataStructuresIntroductionPageTests extends BaseTest {
 	DataStructuresIntroductionPage dataStructuresIntroductionPage;
 	
-	@BeforeMethod()
+	@BeforeMethod(alwaysRun = true)
 	public void dataStructuresIntroductionPageSetupBeforeMethod() throws IOException {
 		login();
 		dataStructuresIntroductionPage = new DataStructuresIntroductionPage();
 		dataStructuresIntroductionPage.navigateToPage(ConfigReader.getDataStructuresIntroductionUrl());
 		LogHelper.info("Navigated to Data Strures Introduction page: " + dataStructuresIntroductionPage.getCurrentUrl());
 	}
-	@Test(priority = 1)
+	@Test(priority = 1,groups={"functional"})
 	public void shouldLoadDataStructuresIntroductionPageSuccessfully() {
 		Assert.assertEquals(dataStructuresIntroductionPage.getCurrentUrl(), ConfigReader.getDataStructuresIntroductionUrl());
 		LogHelper.info("Current page is " + dataStructuresIntroductionPage.getCurrentUrl());
 	}
 
-	@Test
+	@Test(groups={"functional"})
 	public void shouldNavigateToTimeComplexityPageFromTopicsCovered() {
 		dataStructuresIntroductionPage.clickLinkUnderTopicsCovered(PageNames.TIME_COMPLEXITY_PAGE);
 		assertPageUrlAndHeading(ConfigReader.getDataStructuresTimeComplexityUrl() , PageNames.TIME_COMPLEXITY_PAGE);
 	}
 
-	@Test
+	@Test(groups={"functional"})
 	public void shouldNavigateToPracticeQuestionsPageFromTimeComplexityPage() {
 		dataStructuresIntroductionPage.navigateToPage(ConfigReader.getDataStructuresTimeComplexityUrl());
 		dataStructuresIntroductionPage.clickPracticeLink();
 		assertPageUrlAndHeading(ConfigReader.getDataStructuresPracticeUrl(), PageNames.PRACTICE_QUESTIONS_PAGE);
 	}
 
-	@Test
+	@Test(groups={"functional"})
 	public void shouldNavigateToTryEditorFromTimeComplexityPage() {
 		dataStructuresIntroductionPage.navigateToPage(ConfigReader.getDataStructuresTimeComplexityUrl());
 		dataStructuresIntroductionPage.clickTryHereButton();
