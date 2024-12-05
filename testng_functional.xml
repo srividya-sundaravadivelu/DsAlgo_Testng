@@ -24,7 +24,7 @@
 			<class name="tests.LinkedListPageTests" />
 			<class name="tests.LoginPageTests" />
 			<class name="tests.DataStructuresIntroductionPageTests" />
-			<class name="tests.HomePageTests" />
+			<class name="tests.HomePageTest" />
 		</classes>
 	</test>
 
@@ -47,7 +47,7 @@
 			<class name="tests.LinkedListPageTests" />
 			<class name="tests.LoginPageTests" />
 			<class name="tests.DataStructuresIntroductionPageTests" />
-			<class name="tests.HomePageTests" />
+			<class name="tests.HomePageTest" />
 		</classes>
 	</test>
 
@@ -69,7 +69,7 @@
 			<class name="tests.LinkedListPageTests" />
 			<class name="tests.LoginPageTests" />
 			<class name="tests.DataStructuresIntroductionPageTests" />
-			<class name="tests.HomePageTests" />
+			<class name="tests.HomePageTest" />
 		</classes>
 	</test>
 </suite>
