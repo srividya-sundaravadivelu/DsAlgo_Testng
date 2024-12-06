@@ -12,7 +12,7 @@ import utils.ConfigReader;
 import utils.LogHelper;
 import utils.PageNames;
 
-@Listeners(listeners.TestListener.class)
+
 public class TreePageTests extends BaseTest {
 
 	TreePage treePage;

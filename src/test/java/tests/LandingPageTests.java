@@ -10,7 +10,7 @@ import pages.LandingPage;
 import utils.ConfigReader;
 import utils.LogHelper;
 
-@Listeners(listeners.TestListener.class)
+
 public class LandingPageTests extends BaseTest {
 
 	LandingPage landingPage;
