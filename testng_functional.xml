@@ -25,6 +25,7 @@
 			<class name="tests.LoginPageTests" />
 			<class name="tests.DataStructuresIntroductionPageTests" />
 			<class name="tests.HomePageTest" />
+			<class name="tests.QueuePageTests" />
 		</classes>
 	</test>
 
@@ -48,6 +49,7 @@
 			<class name="tests.LoginPageTests" />
 			<class name="tests.DataStructuresIntroductionPageTests" />
 			<class name="tests.HomePageTest" />
+			<class name="tests.QueuePageTests" />
 		</classes>
 	</test>
 
@@ -70,6 +72,7 @@
 			<class name="tests.LoginPageTests" />
 			<class name="tests.DataStructuresIntroductionPageTests" />
 			<class name="tests.HomePageTest" />
+			<class name="tests.QueuePageTests" />
 		</classes>
 	</test>
 </suite>
