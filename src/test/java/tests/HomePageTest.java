@@ -21,34 +21,34 @@ package tests;
 			homePage.navigateToPage(ConfigReader.getHomeUrl());
 			LogHelper.info("Navigated to Home page: " + homePage.getCurrentUrl());
 		}
-		@Test(priority = 1,groups={"functional"})
+		@Test(priority = 1,groups={"sanity","functional"})
 		public void shouldLoadHomePageSuccessfully() {
 			Assert.assertEquals(homePage.getCurrentUrl(), ConfigReader.getHomeUrl());
 			LogHelper.info("Current page is " + homePage.getCurrentUrl());
 		}
 
 
-		@Test(groups={"functional"})
+		@Test(groups={"sanity","functional"})
 		public void shouldnavigatetoDatastructureintroductionpage() {
 			homePage.clickGetStarted("data-structures-introduction");
 		    Assert.assertEquals(homePage.getCurrentUrl(), ConfigReader.getDataStructuresIntroductionUrl());
 		}
 
-		@Test(groups={"functional"})
+		@Test(groups={"sanity","functional"})
 		public void shouldnavigatetoArrayPage() {
 			homePage.clickGetStarted(PageNames.ARRAY_PAGE);
 		    Assert.assertEquals(homePage.getCurrentUrl(), ConfigReader.getArrayUrl());
 		    assertPageUrlAndHeading(ConfigReader.getArrayUrl(), PageNames.ARRAY_PAGE);
 		}
 		
-		@Test(groups={"functional"})
+		@Test(groups={"sanity","functional"})
 		public void shouldnavigatetoStackPage() {
 			homePage.clickGetStarted(PageNames.STACK_PAGE);
 		    Assert.assertEquals(homePage.getCurrentUrl(), ConfigReader.getStackUrl());
 		   assertPageUrlAndHeading(ConfigReader.getStackUrl(), PageNames.STACK_PAGE);
 		}
 		
-		@Test(groups={"functional"})
+		@Test(groups={"sanity","functional"})
 		public void shouldnavigatetoQueuePage() {
 			homePage.clickGetStarted(PageNames.QUEE_PAGE);
 		    Assert.assertEquals(homePage.getCurrentUrl(), ConfigReader.getQueueUrl());
@@ -56,21 +56,21 @@ package tests;
 		}
 		
 		
-		@Test(groups={"functional"})
+		@Test(groups={"sanity","functional"})
 		public void shouldnavigatetoTreePage() {
 			homePage.clickGetStarted(PageNames.TREE_PAGE);
 		    Assert.assertEquals(homePage.getCurrentUrl(), ConfigReader.getTreeUrl());
 		   assertPageUrlAndHeading(ConfigReader.getTreeUrl(), PageNames.TREE_PAGE);
 		}
 		
-		@Test(groups={"functional"})
+		@Test(groups={"sanity","functional"})
 		public void shouldnavigatetoGraphPage() {
 			homePage.clickGetStarted(PageNames.GRAPH_PAGE);
 		    Assert.assertEquals(homePage.getCurrentUrl(), ConfigReader.getGraphHomeUrl());
 		   assertPageUrlAndHeading(ConfigReader.getGraphHomeUrl(), PageNames.GRAPH_PAGE);
 		}
 		
-		@Test(groups={"functional"})
+		@Test(groups={"sanity","functional"})
 		public void shouldnavigatetoLinkedListPage() {
 			homePage.clickGetStarted(PageNames.LINKED_LIST_LINK);
 		    Assert.assertEquals(homePage.getCurrentUrl(), ConfigReader.getLinkedListUrl());
@@ -78,7 +78,7 @@ package tests;
 		}
 		
 		
-		@Test(groups={"functional"})
+		@Test(groups={"sanity","functional"})
 		public void shouldnavigatetoArraysPagefromDropdownlist() {
 			homePage.clickDropDownItem("Arrays");
 		    Assert.assertEquals(homePage.getCurrentUrl(), ConfigReader.getArrayUrl());
@@ -94,28 +94,28 @@ package tests;
 		}
 		
 		
-		@Test(groups={"functional"})
+		@Test(groups={"sanity","functional"})
 		public void shouldnavigatetoStackfromDropdownlist() {
 			homePage.clickDropDownItem(PageNames.STACK_PAGE);
 		    Assert.assertEquals(homePage.getCurrentUrl(), ConfigReader.getStackUrl());
 		   assertPageUrlAndHeading(ConfigReader.getStackUrl(), PageNames.STACK_PAGE);
 		}
 		
-		@Test(groups={"functional"})
+		@Test(groups={"sanity","functional"})
 		public void shouldnavigatetoQueuePagefromDropdownlist() {
 			homePage.clickDropDownItem(PageNames.QUEE_PAGE);
 		    Assert.assertEquals(homePage.getCurrentUrl(), ConfigReader.getQueueUrl());
 		   assertPageUrlAndHeading(ConfigReader.getQueueUrl(), PageNames.QUEE_PAGE);
 		}
 		
-		@Test(groups={"functional"})
+		@Test(groups={"sanity","functional"})
 		public void shouldnavigatetoTreePagefromDropdownlist() {
 			homePage.clickDropDownItem(PageNames.TREE_PAGE);
 		    Assert.assertEquals(homePage.getCurrentUrl(), ConfigReader.getTreeUrl());
 		   assertPageUrlAndHeading(ConfigReader.getTreeUrl(), PageNames.TREE_PAGE);
 		}
 		
-		@Test(groups={"functional"})
+		@Test(groups={"sanity","functional"})
 		public void shouldnavigatetoGraphPagefromDropdownlist() {
 			homePage.clickDropDownItem(PageNames.GRAPH_PAGE);
 		    Assert.assertEquals(homePage.getCurrentUrl(), ConfigReader.getGraphHomeUrl());
