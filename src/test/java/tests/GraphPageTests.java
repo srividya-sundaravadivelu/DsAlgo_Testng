@@ -11,7 +11,7 @@ import pages.GraphPage;
 import utils.ConfigReader;
 import utils.LogHelper;
 import utils.PageNames;
-@Listeners(listeners.TestListener.class)
+
 public class GraphPageTests extends BaseTest {
 
 	GraphPage graphPage;

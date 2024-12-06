@@ -17,7 +17,7 @@ import utils.ConfigReader;
 import utils.LogHelper;
 import utils.PageNames;
 
-@Listeners(listeners.TestListener.class)
+
 public class ArrayPageTests extends BaseTest {
 	ArrayPage arrayPage;
 

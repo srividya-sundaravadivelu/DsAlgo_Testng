@@ -13,7 +13,7 @@ import pages.LoginPage;
 import utils.ConfigReader;
 import utils.LogHelper;
 
-@Listeners(listeners.TestListener.class)
+
 public class LoginPageTests extends BaseTest {
 	LoginPage loginPage;
 	

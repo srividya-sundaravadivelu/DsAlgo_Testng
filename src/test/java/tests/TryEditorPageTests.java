@@ -14,7 +14,7 @@ import pages.TryEditorPage;
 import utils.ConfigReader;
 import utils.LogHelper;
 
-@Listeners(listeners.TestListener.class)
+
 public class TryEditorPageTests extends BaseTest {
 
 	TryEditorPage tryEditorPage;

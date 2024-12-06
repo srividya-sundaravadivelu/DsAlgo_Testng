@@ -14,7 +14,7 @@ import pages.LinkedListPage;
 import utils.ConfigReader;
 import utils.LogHelper;
 import utils.PageNames;
-@Listeners(listeners.TestListener.class)
+
 public class LinkedListPageTests extends BaseTest {
 	LinkedListPage linkedlistPage;
 

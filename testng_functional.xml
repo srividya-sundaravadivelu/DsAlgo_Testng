@@ -23,6 +23,9 @@
 			<class name="tests.RegisterPageTests" />
 			<class name="tests.LinkedListPageTests" />
 			<class name="tests.LoginPageTests" />
+			<class name="tests.DataStructuresIntroductionPageTests" />
+			<class name="tests.HomePageTest" />
+			<class name="tests.QueuePageTests" />
 		</classes>
 	</test>
 
@@ -44,6 +47,9 @@
 			<class name="tests.RegisterPageTests" />
 			<class name="tests.LinkedListPageTests" />
 			<class name="tests.LoginPageTests" />
+			<class name="tests.DataStructuresIntroductionPageTests" />
+			<class name="tests.HomePageTest" />
+			<class name="tests.QueuePageTests" />
 		</classes>
 	</test>
 
@@ -64,6 +70,9 @@
 			<class name="tests.RegisterPageTests" />
 			<class name="tests.LinkedListPageTests" />
 			<class name="tests.LoginPageTests" />
+			<class name="tests.DataStructuresIntroductionPageTests" />
+			<class name="tests.HomePageTest" />
+			<class name="tests.QueuePageTests" />
 		</classes>
 	</test>
 </suite>
