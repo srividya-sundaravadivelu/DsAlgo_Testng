@@ -57,9 +57,13 @@ public final class PageNames {
     
     //Stack Page names
     public static final String STACK_PAGE ="Stack";
+    public static final String STACK_OPERATIONS_IN_STACK_PAGE="Operations in Stack";
+    public static final String STACK_IMPLEMENTAION_PAGE ="Implementation";
+    public static final String STACK_APPLICATION_PAGE="Applications";
+    public static final String STACK_PRACTICE_QUESTIONS_PAGE ="Practice Questions";
+    
     
     //Queue Page names
-    
     public static final String QUEE_PAGE ="Queue";
     public static final String IMPLEMENTATION_OF_QUEUE_IN_PYTHON = "Implementation of Queue in Python";
     public static final String IMPLEMENTAION_USING_COLLECTIONS_DEQUEUE = "Implementation using collections.deque";
