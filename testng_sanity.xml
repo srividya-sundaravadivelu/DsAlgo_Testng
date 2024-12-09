@@ -19,6 +19,8 @@
 			<class name="tests.LandingPageTests" />
 			<class name="tests.RegisterPageTests" />
 			<class name="tests.LoginPageTests" />
+			<class name="tests.HomePageTest" />
+			
 		</classes>
 	</test>
 
@@ -35,6 +37,7 @@
 			<class name="tests.LandingPageTests" />
 			<class name="tests.RegisterPageTests" />
 			<class name="tests.LoginPageTests" />
+			<class name="tests.HomePageTest" />
 		</classes>
 	</test>
 
@@ -50,6 +53,7 @@
 			<class name="tests.LandingPageTests" />
 			<class name="tests.RegisterPageTests" />
 			<class name="tests.LoginPageTests" />
+			<class name="tests.HomePageTest" />
 		</classes>
 	</test>
 </suite>
