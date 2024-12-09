@@ -86,7 +86,7 @@ package tests;
 		}
 		
 		
-		@Test(groups={"functional"})
+		@Test(groups={"sanity","functional"})
 		public void shouldnavigatetoLinkedListPagefromDropdownlist() {
 			homePage.clickDropDownItem(PageNames.LINKED_LIST_PAGE);
 		    Assert.assertEquals(homePage.getCurrentUrl(), ConfigReader.getLinkedListUrl());
